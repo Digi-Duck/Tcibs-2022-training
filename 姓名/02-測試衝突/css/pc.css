@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+}
+
+.block {
+    padding: 50px;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+.box {
+    width: calc(25% - 15px);
+    height: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+#box1 {
+    background-color: palegreen;
+}
+
+#box2 {
+    background-color: peru;
+}
+
+#box3 {
+    background-color: palevioletred;
+}
+
+#box4 {
+    background-color: palegoldenrod;
+    margin: 0px;
+}
