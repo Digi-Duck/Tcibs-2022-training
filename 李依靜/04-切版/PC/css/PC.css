@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+
+#background{
+    width: 1920px;
+    height: 100vh;
+    background-color: white;
+}
+
+#graybox{
+    width: 320px;
+    height: 100vh;
+    background-color: gray;
+    float: left;
+}
+
+#logo{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.text{
+    padding: 50px;
+    text-align: center;
+}
+
+#imgback{
+    width: calc(1920px - 320px);
+    height: 100vh;
+    background-color: rgb(35, 71, 155);
+    float: right;
+}
+
+#imgbox{
+    height: 540px;
+    width: 1200px;
+    background-color: indigo;
+    margin: auto;
+    margin-top: 200px;
+}
+.img{
+    height: 540px;
+    width: 400px;
+    background-color: aliceblue;
+    float: left;
+    background-size: cover;
+}
+#imgx{
+    background-image: url(/PC/image/zjurktv3fis81.webp);
+}
+#imgy{
+    background-image: url(/PC/image/Sanya.\(Kuzuha.Channel\).full.3539483.png);
+}
+#imgz{
+    background-image: url(/PC/image/desktop-wallpaper-kuzuha-channel-kuzuha-thumbnail.jpg);
+}
