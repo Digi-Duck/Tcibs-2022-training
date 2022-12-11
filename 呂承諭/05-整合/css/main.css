@@ -365,3 +365,6 @@ body{
 .photo4{
     backdrop-filter: blur(5px);
 }
+.left{
+    background-position: left;
+}
