@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box疊加4</title>
+    <style>
+        #box01 {
+            width: 400px;
+            height: 600px;
+        }
+
+        #box02 {
+            width: 400px;
+            height: 100px;
+            background-color: rgb(55, 0, 255);
+        }
+
+        #box03 {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(77, 156, 81);
+            float: left;
+        }
+
+        #box04 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(190, 119, 236);
+            float: right;
+        }
+        #box05 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(143, 167, 59);
+            float: right;
+            clear: right;
+
+        }
+        #box06 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(84, 121, 73);
+            float: right;
+            clear: right;
+
+        }
+        #box07 {
+            width: 400px;
+            height:100px;
+            background-color: rgb(126, 49, 214);
+            float: right;
+            clear: right;
+
+        }
+        #box08 {
+            width: 100px;
+            height:400px;
+            background-color: rgb(65, 95, 116);
+            float: right;
+        }
+        #box09 {
+            width: 300px;
+            height:100px;
+            background-color: rgb(250, 96, 96);
+            float: left;
+
+        }
+        #box10 {
+            width: 300px;
+            height: 50px;
+            background-color: rgb(141, 122, 58);
+
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div id="box01">
+        <div id="box02">A</div>
+        <div id="box03">B
+            <div id="box04">C</div>
+            <div id="box05">D</div>
+            <div id="box06">E</div>
+            <div id="box09">
+                <div id="box10"></div>
+            </div>
+        </div>
+        <div id="box08"></div>
+        <div id="box07"></div>
+    </div>
+</body>
+
+</html>

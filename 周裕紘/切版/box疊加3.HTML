@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box疊加3</title>
+    <style>
+        #box01 {
+            width: 400px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        #box02 {
+            width: 400px;
+            height: 100px;
+            background-color: rgb(55, 0, 255);
+        }
+
+        #box03 {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(77, 156, 81);
+            float: left;
+        }
+
+        #box04 {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(112, 20, 173);
+            float: right;
+        }
+        #box05 {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(143, 167, 59);
+            float: right;
+            clear: right;
+
+        }
+        #box06 {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(84, 121, 73);
+            float: right;
+            clear: right;
+
+        }
+        #box07 {
+            width: 400px;
+            height:100px;
+            background-color: rgb(126, 49, 214);
+            float: right;
+            clear: right;
+
+        }
+        #box08 {
+            width: 100px;
+            height:100px;
+            background-color: rgb(65, 95, 116);
+        
+
+        }
+        #box09 {
+            width: 100px;
+            height:100px;
+            background-color: rgb(250, 96, 96);
+            float: right;
+
+        }
+        #box10 {
+            width: 100px;
+            height:100px;
+            background-color: rgb(141, 122, 58);
+
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div id="box01">
+        <div id="box02"></div>
+        <div id="box03">
+            <div id="box04">
+                <div id="box08"></div>
+            </div>
+            <div id="box05">
+                <div id="box09"></div>
+            </div>
+            <div id="box06">
+                <div id="box10"></div>
+            </div>
+        </div>
+        <div id="box07"></div>
+    </div>
+</body>
+
+</html>

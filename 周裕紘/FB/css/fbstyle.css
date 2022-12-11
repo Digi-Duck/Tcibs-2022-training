@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+}
+h1,h2,h3,h4{
+    margin: 0;
+    font-family: Microsoft JhengHei;
+}
+#top_box{
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    position:relative;
+    position:fixed;
+    float: left;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    z-index: 9999;
+}
+#top_icon{
+    width: 40px;
+    height: 40px;
+    background-image: url(../image/FBicon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+}
+#top_search{
+    width: calc(20vw - 15px);
+    height: 40px;
+    background-color:rgb(244, 244, 244);
+    position: absolute;
+    border-radius:50px;
+    top: 10px;
+    left: 65px;
+    line-height: 40px;
+    padding-left: 15px;
+    font-family: sans-serif;
+    color: rgb(123, 123, 123);
+    cursor: text;
+}
+#main_body{ 
+    width: 950px;
+    height: 60vh;
+    background-color: aquamarine;
+    border-radius:10px;
+    background-image: url(../image/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main_box{
+    width: 950px;
+    height: 2000px;
+    margin-left: calc((100vw - 950px)/ 2);
+    margin-right: calc((100vw - 950px)/ 2);
+
+}
+#main_info{
+    width: 950px;
+    height: 200px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+#main_info_pho{
+    width: 168px;
+    height: 168px;
+    background-color: rgb(173, 164, 164);
+    border-radius: 50%;
+    position: absolute;
+    left:20px;
+    top:-100px;
+    background-image: url(../image/pho.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid rgb(233, 233, 233);
+}
+#main_info_text{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    left:200px;
+    top:10px;
+}
+#main_info_follow{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(0, 132, 255);
+    position: absolute;
+    right:20px;
+    bottom: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: auto;
+    color: white;
+    cursor: pointer;
+    transition: all .1s linear;
+    text-decoration:none;
+}
+#main_info_follow:hover{
+    background-color: rgb(0, 102, 197);
+    
+}
+#main_info_main{
+    left:20px;
+    bottom: 20px;
+    color: dodgerblue;
+}
+#main_info_about{
+    left:120px;
+    bottom: 20px;
+    color: rgb(42, 42, 42);
+}
+#main_info_friand{
+    left:220px;
+    bottom: 20px;
+    color: rgb(42, 42, 42);
+}
+#main_info_photos{
+    left:330px;
+    bottom: 20px;
+    color: rgb(42, 42, 42);
+}
+#main_info_videos{
+    left:440px;
+    bottom: 20px;
+    color: rgb(42, 42, 42);
+}
+.main_info_hover:hover{
+    background-color: rgb(215, 215, 215);
+
+}
+.main_info_list{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: Microsoft JhengHei Light;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+#main_intro{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 10px;
+    border-radius: 10px;
+    float: left;
+}
+#main_info_post{
+    width: 540px;
+    height: 1500px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 10px;
+    border-radius: 10px;
+    float: right;
+}
