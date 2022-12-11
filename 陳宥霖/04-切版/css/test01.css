@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+.all {
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.descriptsion {
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(167, 94, 94);
+    position: relative;
+}
+
+.content_box {
+    background-color: rgb(23, 125, 184);
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    transform: translateY(35%);
+}
+
+.left {
+    float: left;
+}
+
+.content {
+    width: calc(100vw - 200px);
+    height: 100vh;
+    float:right;
+}
+
+.content_box1 {
+    width: 33.4%;
+    height: 100%;
+    background-color: rgb(92, 25, 216);
+    float: left;
+}
+
+.content_box2 {
+    width: 33.4%;
+    height: 100%;
+    background-color: rgb(216, 25, 184);
+    float: left;
+}
+
+.content_box3 {
+    width: 33.2%;
+    height: 100%;
+    background-color: rgb(25, 216, 206);
+    float: right;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.word {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}

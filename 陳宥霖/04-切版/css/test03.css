@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+.all{
+    width: 768px;
+    height: 1024px;
+    background-color: aqua;
+    margin:auto;
+}
+.left{
+    float: unset;
+}
+.descriptsion{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(167, 94, 94);
+    position: relative;
+}
+
+.content_box{
+    background-color: rgb(23, 125, 184);
+    width: 90%;
+    height: 724px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.content_box1{
+    width:100%;
+    height: 49%;
+    background-color: rgb(92, 25, 216);
+}
+
+.content_box2{
+    width:49%;
+    height: 49%;
+    background-color: rgb(216, 25, 184);
+    position: absolute;
+    right:0px; 
+    bottom:0px;
+}
+
+.content_box3{
+    width:49%;
+    height: 49%;
+    background-color: rgb(25, 216, 206);
+    position: absolute;
+    left:0px;
+    bottom:0px;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    position: absolute;
+    top:25%;
+    left:10%;
+}
+
+.word{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top:30%;
+    left:60%;
+}
