@@ -1,0 +1,69 @@
+body{
+    margin: 0px;
+}
+#all{
+    margin: auto;
+    background-color: wheat;
+    height: 1024px;
+    width: 1280px;
+}
+#left{
+    padding-top: 100px;
+    float: left;
+    background-color:gray;
+    height: calc(100% - 100px);
+    width: 20%;
+}
+#right{
+    float: right;
+    background-color: palegreen;
+    height: calc(100% - 200px);
+    width: 80%;
+    padding-top: 200px;
+}
+#right2{
+    background-color: aqua;
+    height: 500px;
+    width: 60%;
+    margin: auto;
+    
+}
+#x{
+    border-bottom: 2px black solid;
+    float: left;
+    background-color: aquamarine;
+    height: calc(250px - 2px);
+    width: 100%;
+}
+#y{
+    border-right: 2px black solid;
+    float: left;
+    background-color: pink;
+    height: 250px;
+    width: calc(307.2px - 2px);
+}
+#z{
+    float: left;
+    background-color:orange;
+    height: 250px;
+    width: 307.2px;
+}
+#left2{
+    background-color: antiquewhite;
+    margin: auto;
+    height: 20%;
+    width: 80%;
+}
+#logo{
+    height:200px;
+    width: 100%;
+    background-image: url(../切版/irys.jpg);
+    background-size:100% ;
+    background-repeat:no-repeat ;
+    background-position: center;
+}
+#word{
+    line-height: 100px;
+    text-align: center;
+    width: 100%;
+}
