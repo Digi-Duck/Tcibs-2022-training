@@ -1,0 +1,107 @@
+body{
+    margin: 0px;
+}
+#all{
+    background-image: url("../03-parallax/sky.jpg");
+    width: 100%;height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: auto;
+}
+#word01{
+    line-height: 150px;
+    text-align: center;
+    background-color: #E6CAFF;
+    width: 100%;
+}
+#word02{
+    margin: auto;
+    line-height: 50px;
+    text-align: center;
+    height: 170px;width: 70%;
+}
+#down{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;top: 45%;left: 39%;
+    float: left;
+    width: 25%;
+    background-color: #CECEFF;
+}
+#all2{
+    background-image: url("../03-parallax/00.jpeg");
+    width: 100%;height: 100vh;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: auto;
+    position: relative;
+}
+#word{
+    background-color: #b64949;
+    margin: auto;
+    width: 100%;
+    height: 250px;
+    position: relative
+    
+}
+#word03{
+    line-height: 50px;
+    text-align: center;
+    width: 70%;
+    position: absolute;left: 17%;top: 20%;
+}
+#middle{
+    margin: auto;
+    text-align: center;
+    height: 170px;width: 70%;
+    position: absolute;top: 50%;left: 16%;
+}
+#all3{
+    background-image: url("../03-parallax/000.webp");
+    width: 100%;height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: auto;
+    position: relative;
+}
+#scroll{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;top: 52%;left: 35%;
+}
+#up{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;top: 52%;left: 60%;
+}
+#word04{
+    line-height: 200px;
+    background-color: #ACD6FF;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+#all4{
+    background-image: url("../03-parallax/skyy.webp");
+    width: 100%;height: 100vh;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: auto;
+    position: relative;
+}
+#word05{
+    position: absolute;left: 38%;top: 48%;
+    text-align: center;
+    border-radius: 5px;
+    float: left;
+    width: 25%;
+    background-color: #CECEFF;
+}

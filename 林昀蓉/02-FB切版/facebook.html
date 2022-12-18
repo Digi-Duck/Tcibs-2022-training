@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #back{
+            background-color:#696969 ;width: 100%;;height: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #all{
+            background-color: gray;width: 70%;height: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            position:relative;
+        }
+        #top{
+            background-color: #2A52BE; width: 100%;height: 12%;
+            position: relative;
+        }
+        #facebook{
+            background-color: black; width: 50px;height: 50px;
+            position: absolute;left: 20px;top: 8px;
+            background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgcqM0MTOpixp7CsJV3bdg24BY9SwXqAELw&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: 135%;
+            background-position: center;
+        }
+        #input{
+            background-color: white;width: 40%;height: 45px;
+            position: absolute;left: 95px;top: 10px;
+            margin-left: auto;margin-right: auto;
+            line-height: 45px;
+            text-align: left;
+            border-radius: 5px;
+        }
+        #更新資料{
+            line-height: 40px;
+            background-color: white;width: 90px;height: 40px;
+            position: absolute;right: 200px;bottom: 80px;
+        }
+        #查看活動資料{
+            line-height: 40px;
+            background-color: white;width: 120px;height: 40px;
+            position: absolute;right: 40px;bottom: 80px;
+        }
+        #bottom{
+            background-color: #D3D3D3; width: 100%;height: 12%;
+            position: absolute;bottom: 0px;
+            
+        }
+        #動態時報{
+            line-height: 67px ;
+            text-align: right;
+            background-color: white;width:30% ;height: 67px;
+            padding-right: 1%;
+            display:block;float:left;
+            border-right: 2px solid #D3D3D3;
+
+        }
+        #關於{
+            display:block;float:left;
+            line-height: 67px ;
+            background-color: white;width:5% ;height: 67px;
+            border-right: 2px solid #D3D3D3;
+        }
+        #朋友{
+            display:block;float:left;
+            line-height: 67px ;
+            background-color: white;width:5% ;height: 67px;
+            border-right: 2px solid #D3D3D3;
+
+        }
+        #相片{
+            display:block;float:left;
+            line-height: 67px ;
+            background-color: white;width:5% ;height: 67px;
+            border-right: 2px solid #D3D3D3;
+
+        }
+        #更多{
+            line-height: 67px ;
+            text-align: left;
+            background-color: white;width:calc(55% - 2% - 8px);height: 67px;
+            padding-left: 1%;
+            display:block;float: right;
+        }
+        #circle{
+            position: absolute;bottom: 20px;left: 40px;
+            z-index: 1;
+            background-color:#D3D3D3;width: 190px;height: 30%;
+            border-radius:50%;
+            border: 3px solid white;
+        }
+        #middle{
+            background-color: gray;width: 100%;height: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="back">
+        <div id="all">
+            <div id="top">
+                <div id="facebook"></div>
+                <div id="input"><font color="#C0C0C0">搜尋人、地點、事物</font></div>
+            </div>
+            <div id="middle">
+                <div id="circle"></div>
+                <div id="更新資料">更新資料</div>
+                <div id="查看活動資料">查看活動資料</div>
+            </div>
+            <div id="bottom">
+                <div id="動態時報"><font color="#000080">動態時報</font></div>
+                <div id="關於"><font color="#000080">關於</font></div>
+                <div id="朋友"><font color="#000080">朋友</font></div>
+                <div id="相片"><font color="#000080">相片</font></div>
+                <div id="更多"><font color="#000080">更多</font></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
