@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #left-aside{
+            width: calc(300px - 20px);
+            padding: 50px 10px;
+            background-image: url(/img/bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #hover:hover #left-aside{
+            width: 300px;
+            height: 300px;
+            margin:  0px auto 100px;
+            background-repeat: no-repeat;
+            background-image: url("https://memeprod.ap-south-1.linodeobjects.com/user-gif-post/1654151736656.gif");
+       
+        }
+        #photo{
+            width: 256px;
+            height: 256px;
+            margin:  0px auto 100px;
+            background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1688248122333193690/E203434B4344D6B9AEF48513F5F682656647EE83/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #hover:hover #photo{
+            background-image: url(/img/img2.jpg);
+        }
+ 
+        #project-list{
+            text-align: center;
+        }
+        .project{
+            margin-bottom: 10px;
+        }
+        #hover:hover .project01{
+            background-color: rgb(255, 195, 127);
+        }
+        #hover:hover .project02{
+            color: rgb(255, 0, 140);
+        }
+        #hover:hover .project03{
+            font-size: 30px;
+            background-color: rgb(129, 127, 255);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="hover">
+            <aside id="left-aside">
+                <div id="photo"></div>
+                <div id="project-list">
+                    <div class="project">
+                        <a class="project01" href="https://cornhub.website">好康的</a>
+                    </div>
+                    <div class="project">
+                        <a class="project02" href="https://www.foodpanda.com.tw/">甲殺筱</a>
+                    </div>
+                    <div class="project">
+                        <a class="project03" href="https://www.microsoft.com/zh-tw">切微軟瞜</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <section></section>
+    </main>
+ 
+</body>
+</html>
+
