@@ -1,0 +1,44 @@
+#all{
+    width: 300px;
+    float: left;
+}
+#one{
+    width: 300px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+}
+#two{
+    width: 300px;
+    height: 500px;
+    float: left;
+}
+#twoleft{
+    width: 150px;
+    height: 500px;
+    background-color: antiquewhite;
+    float: left;
+}
+#tworight{
+    width: 150px;
+    height: 500px;
+    float: right;
+}
+#rightone{
+    width: 150px;
+    height: 250px;
+    float: left;
+    background-color: black;
+}
+#righttwo{
+    width: 150px;
+    height: 250px;
+    background-color: blueviolet;
+    float: left;
+}
+#there{
+    width: 300px;
+    height: 100px;
+    float: left;
+    background-color: aquamarine;
+}

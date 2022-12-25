@@ -1,0 +1,65 @@
+#all{
+    width: 800px;
+    float: left;
+}
+#one{
+    width: 800px;
+    height: 100px;
+    float: left;
+    background-color: rgb(255, 240, 250);
+}
+#two{
+    width: 800px;
+    height: 450px;
+    float: left;
+}
+#twoleft{
+    width: 100px;
+    height: 450px;
+    background-color: antiquewhite;
+    float: left;
+}
+#tworight{
+    width: 700px;
+    height: 450px;
+    float: right;
+}
+#rightone{
+    width: 700px;
+    height: 150px;
+    background-color: aqua;
+}
+#righttwo{
+    width: 700px;
+    height: 150px;
+    background-color: aquamarine;
+}
+#rightthere{
+    width: 700px;
+    height: 150px;
+    background-color: rgb(244, 240, 255);
+}
+#oneone{
+    width: 150px;
+    height: 150px;
+    background-color: beige;
+    float: left;
+}
+#twotwo{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    float: right;
+}
+#therethere{
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+    float: left;
+}
+#there{
+    width: 800px;
+    height: 100px;
+    background-color: blueviolet;
+    float: left;
+}
