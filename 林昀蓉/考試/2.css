@@ -1,0 +1,202 @@
+#all{
+    margin: auto;
+    height: 690px;
+    width: 966px;
+}
+#top{
+    width:800px;
+    height:0;
+    border-width:0 83px 190px 83px;
+    border-style:none solid solid;
+    border-color:transparent transparent black;
+}
+#top2{
+    padding-top: 1px;
+    margin-left: -82px;
+    width:calc(800px - 2px);
+    height:0;
+    border-width:0 83px calc(190px - 2px) 83px;
+    border-style:none solid solid;
+    border-color:transparent transparent rgb(56, 8, 8);
+}
+#line{
+    width: 770px;
+    height: 50px;
+    float: left;
+    margin-left:15px ;
+    margin-top: 70px;
+}
+#a1{
+    background-color: yellow;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a2{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a3{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a4{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a5{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a6{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a7{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a8{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a9{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a10{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a11{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a12{
+    background-color: purple;
+    float: left;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#a13{
+    background-color: yellow;
+    margin-left: 10px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#bottom{
+    background-color: rgb(109, 24, 24);
+    height: calc(500px - 2px);
+    width: calc(600px - 2px);
+    margin: auto;
+    border:1px black solid;
+}
+#window{
+    float: left;
+    margin-top: 150px;
+    margin-left: 37.5px;
+    background-color: darkblue;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border:1px black solid;
+}
+#glass{
+    height: 175px;
+    width: 175px;
+    background-color: aquamarine;
+    margin-left: 37.5px;
+    margin-top: 37.5px;
+}
+#b1{
+    float: left;
+    background-color: lightgreen;
+    height: calc(87.5px - 2px);
+    width: calc(87.5px - 2px);
+    border:1px black solid;
+}
+#b2{
+    float: left;
+    background-color: red;
+    height: calc(87.5px - 2px);
+    width: calc(87.5px - 2px);
+    border:1px black solid;
+}
+#c1{
+    float: left;
+    background-color: red;
+    height: calc(87.5px - 2px);
+    width: calc(87.5px - 2px);
+    border:1px black solid;
+}
+#c2{
+    float: left;
+    background-color: lightgreen;
+    height: calc(87.5px - 2px);
+    width: calc(87.5px - 2px);
+    border:1px black solid;
+}
+#door{
+    float: left;
+    background-color: white;
+    height: calc(350px - 2px);
+    width: calc(200px - 2px);
+    margin-left: 55px;
+    margin-top: 149px;
+    border:1px black solid;
+}
+#door2{
+    float: left;
+    margin-top: 160px;
+    margin-left: 15px;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:1px black solid;
+}

@@ -1,0 +1,138 @@
+#all{
+    margin: auto;
+    background-color: white;
+    height: calc(940px - 65px);
+    width: 440px;
+    border:30px black solid;
+    padding-top: 65px;
+}
+#top{
+    background-color: aqua;
+    margin: auto;
+    height: 48px;
+    width: 348px;
+    border:1px black solid;
+    margin-bottom: 65px;
+}
+#middle{
+    background-color: white;
+    margin: auto;
+    height: 280px;
+    width: 350px;
+}
+#line1{
+    background-color: white;
+    height: 115px;
+    width: 350px;
+}
+#aa{
+    float: left;
+    background-color:white ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#ab{
+    float: left;
+    background-color:green ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#ac{
+    float: left;
+    background-color:white;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#ad{
+    float: left;
+    background-color:green ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#line2{
+    background-color: white;
+    height: 115px;
+    width: 350px;
+}
+#ba{
+    float: left;
+    background-color:darkblue ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#bb{
+    float: left;
+    background-color:darkblue ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#bc{
+    float: left;
+    background-color:red;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#bd{
+    float: left;
+    background-color:red ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left: 50px;
+}
+#line3{
+    background-color:white;
+    height: 50px;
+    width: 350px;
+}
+#ca{
+    float: left;
+    background-color:purple ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+}
+#cb{
+    float: left;
+    background-color:purple ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left:50px ;
+}
+#cc{
+    float: left;
+    background-color:purple;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left:50px ;
+}
+#cd{
+    float: left;
+    background-color:purple ;
+    height: 48px;
+    width: 48px;
+    border:1px black solid;
+    margin-left:50px ;
+}
+#bottom{
+    margin: auto;
+    margin-top: 65px;
+    background-color: yellow;
+    border:1px black solid;
+    height: 368px;
+    width: 348px;
+}

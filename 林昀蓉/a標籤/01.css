@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+}
+#f01{
+    background-color: red;
+}
+#f02{
+    background-color:orange ;
+}
+#f03{
+    background-color: yellow;
+}
+#f04{
+    background-color: greenyellow;
+}
+#f05{
+    background-color: aqua;
+}
+#f06{
+    background-color: blue;
+}
+#f07{
+    background-color: purple;
+}
+.same{
+    text-align: center;
+    font-size: 70px;
+    margin: auto;
+    height: 100vh;
+    width: 1000px;
+}
+#elevator{
+    background-color: wheat;
+    height: 300px;
+    width: 100px;
+    position: fixed;right: 0px;
+}
+.button{
+    text-decoration:none;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    float: left;
+    clear: left;
+    line-height: 42px;
+}
+@media screen and (max-width:1000px) {
+    .same{
+        width: 500px;
+    }
+    #elevator{
+        left: 0px;
+    }
+}
+@media screen and (max-height:800px){
+    .same{
+        height: 25vh;
+    }
+}
