@@ -1,0 +1,97 @@
+body{
+    margin: 0px
+}
+
+#head{
+    width: 1909px;
+    height: 54px;
+    background-color: aqua;
+}
+
+#menubox{
+    width: 1600px;
+    height: 54px;
+    background-color: bisque;
+    margin: auto;
+}
+
+#MICROSOFT{
+    padding: 14px 20px 18px 8px;
+    float: left;
+    height: calc(100% - 32px);
+    width: 104px;
+    background-color: aliceblue;
+}
+
+.function{
+    padding: 18px 10px 16px 14px;
+    float: left;
+}
+
+#sf9witharrow{
+    width: 1909px;
+    height: 662px;
+    margin-top: 2px;
+}
+
+.surfacepro9img{
+    width: 100%; 
+    position: absolute;
+}
+
+.inimgtextbox{
+    width: 570.66px;
+    height: 212.39px;
+    position: relative;
+    top: 190px;
+    left: 200px;
+}
+
+.flex1{
+    display: flex;
+    flex-direction: column;
+}
+.new{
+    background-color: white;
+    padding: 0.375em 0.75em;
+    margin-bottom: 0.5em;
+    float: left;
+    width: 48px;
+}
+
+.SurfacePro9{
+    font-size: 35px;
+    margin-bottom: 0.7em;
+}
+
+.text{
+    margin-bottom: 1.25em;
+}
+
+.black{
+    width: 120px;
+    font-size: 16px;
+    color: white;
+    padding: 0.625rem 0.75rem;
+    background-color: black;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 40px 20px;
+}
+
+.margin{
+    margin-top: 8px; 
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+
