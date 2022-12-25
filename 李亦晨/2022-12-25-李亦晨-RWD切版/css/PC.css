@@ -5,8 +5,8 @@ body{
     position: relative;
 }
 .left{
-    width: 200px;
-    height: 100vh;
+    width: 375px;
+    height: 667px;
     background-color: rgba(255, 255, 255);
     position: absolute;
 }
@@ -20,7 +20,7 @@ body{
 .icon{
     width: 108px;
     height: 108px;
-    background-image: url(/李亦晨/RWD切版/image/th.jpg);
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/th.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ body{
 .photo1{
     width: 400px;
     height: 500px;
-    background-image: url(/李亦晨/RWD切版/image/E5J1Dx8VgAQV3mz.jpg);
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/E5J1Dx8VgAQV3mz.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ body{
 .photo2{
     width: 400px;
     height: 500px;
-    background-image: url(/李亦晨/RWD切版/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ body{
 .photo3{
     width: 400px;
     height: 500px;
-    background-image: url(/李亦晨/RWD切版/image/643x0w.jpg);
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/643x0w.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
