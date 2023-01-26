@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+}
+.all{
+    position: relative;
+}
+.left{
+    width: 375px;
+    height: 667px;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+}
+.right{
+    width: 1080px;
+    height: 100vh;
+    background-color: rgba(75, 59, 59, 0.329);
+    position: absolute;
+    left: 200px;
+}
+.icon{
+    width: 108px;
+    height: 108px;
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/th.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.write{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+}
+.allphoto{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.photo1{
+    width: 890px;
+    height: 295px;
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/E5J1Dx8VgAQV3mz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    border-radius: 10px;
+}
+.photo2{
+    width: 445px;
+    height: 295px;
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    border-radius: 10px;
+}
+.photo3{
+    width: 445px;
+    height: 295px;
+    background-image: url(/李亦晨/2022-12-25-李亦晨-RWD切版/image/643x0w.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    border-radius: 10px;
+}
+p{
+    text-align:center;
+    line-height: 200px;
+    font-size: 30px;
+  }
