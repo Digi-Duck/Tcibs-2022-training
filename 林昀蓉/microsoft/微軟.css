@@ -40,6 +40,10 @@ body{
     font-size: x-small;
     font-family: system-ui;
 }
+.word:hover{
+    border-bottom: 2px solid black;
+    margin-bottom: -1px;
+}
 .top{
     margin: 0px 6px;
     float: left;
@@ -51,45 +55,27 @@ body{
 #a{
     width: 97.16px;
 }
-#a1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #b{
     width: 53.67px;
 }
-#b1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #c{
     width: 70.84px;
 }
-#c1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #d{
     width: 60.28px;
 }
-#d1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #e{
     width: 46.91px;
 }
-#e1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #f{
     width: 44px;
 }
-#f1:hover{
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-}
+
 #top-right{
     display: flex;
     align-items: center;
@@ -103,40 +89,39 @@ body{
     align-items: center;
     justify-content: center;
 }
-#g{
-    width: 84.14px;
+.word1:hover{
+    border-bottom: 2px solid black;
+    margin-bottom: -2px;
 }
-#g2{
-    font-size: 10px;
+.word1{
+    text-align: center;
+    font-size: x-small;
+    font-family: system-ui;
+}
+#g{
+    width: 94.41px;
 }
 #h{
-    width: 26px;
-}
-#h2{
-    font-size: 10px;
-    margin-right: 24.44px;
+    width: 50px;
 }
 #i{
-    width: 45px;
-}
-#i2{
-    font-size: 10px;
+    width: 55px;
 }
 #j{
-    width: 42px;
+    width: 40px;
 }
 #pic02{
-    margin-top: 7px;
+    margin-top: 3px;
     float: left;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-size: cover;
     background-image: url(https://img.ixintu.com/download/jpg/20200910/f9256155491e54bf5e99bf29eece0156_512_512.jpg!con);
 }
 #big-box{
     background-color: aqua;
-    height: 662px;
+    height: 542.06px;
     width: 100%;
 }
 #box{
@@ -191,6 +176,9 @@ body{
     height: 40px;
     width: 161.02px;
 }
+#n:hover{
+    background-color: rgb(43, 43, 43);
+}
 #box-control{
     margin: auto;
     height: 67.31px;
@@ -212,4 +200,13 @@ body{
 }
 #box-control-3{
     margin-right: 16px;
+}
+#windows{
+    background-color: cadetblue;
+    width: 100%;
+    height: 104px;
+}
+#left{
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Quick-Link-Icon-80x80-Microsoft-365?wid=40&hei=40);
+    
 }
