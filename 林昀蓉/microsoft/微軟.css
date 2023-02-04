@@ -181,7 +181,7 @@ body{
 }
 #box-control{
     margin: auto;
-    height: 67.31px;
+    height: 67.25px;
     width: 10%;
     margin-top: -4px;
     background-color:lightgreen;
@@ -202,11 +202,50 @@ body{
     margin-right: 16px;
 }
 #windows{
-    background-color: cadetblue;
     width: 100%;
     height: 104px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
-#left{
-    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Quick-Link-Icon-80x80-Microsoft-365?wid=40&hei=40);
-    
+#space{
+    float: left;
+    height: 72px;
+    margin: 16px;
+}
+#pic{
+    margin: auto;
+    margin-bottom: 8px;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+}
+#word4{
+    font-family: system-ui;
+    font-weight: 400;
+    font-size :14px;
+    margin: auto;
+    color:#0067b8;
+    text-align: center;
+    text-decoration: underline;
+}
+#second{
+    background-color: aquamarine;
+    width: 100%;
+    height: 150vh;
+}
+#four{
+    margin-top: 70px;
+    background-color: blue;
+    width: 100%;
+    height: 384.3px;
+    display: flex;
+    justify-content: center;
+}
+#four-01{
+    float: left;
+    background-color: bisque;
+    height: 100%;
+    width: 323.812px;
+    margin: 0px 12px;
 }
