@@ -3,15 +3,12 @@ body{
 }
 
 #head{
-    width: 1909px;
-    height: 54px;
-    background-color: aqua;
+    width: 100%;
 }
 
 #menubox{
     width: 1600px;
     height: 54px;
-    background-color: bisque;
     margin: auto;
 }
 
@@ -20,55 +17,68 @@ body{
     float: left;
     height: calc(100% - 32px);
     width: 104px;
-    background-color: aliceblue;
 }
 
 .function{
     padding: 18px 10px 16px 14px;
     float: left;
 }
-
-#sf9witharrow{
-    width: 1909px;
+.func2{
+    float: right;
+}
+.func2-2{
+    padding: 5px 10px 0px 14px;
+}
+.funcimg1{
+    width: 30px;
+    height: 30px;
+}
+.funcimg2{
+    width: 15px;
+    height: 15px;
+}
+#hlwitharrow{
+    width: 100%; 
     height: 662px;
     margin-top: 2px;
+    position: relative;
 }
 
-.surfacepro9img{
+.hlimg{
     width: 100%; 
-    position: absolute;
+    position: relative;
 }
 
 .inimgtextbox{
     width: 570.66px;
-    height: 212.39px;
-    position: relative;
+    position: absolute;
     top: 190px;
     left: 200px;
 }
 
-.flex1{
+.flex-content{
     display: flex;
     flex-direction: column;
 }
 .new{
-    background-color: white;
-    padding: 0.375em 0.75em;
+    background-color: orange;
+    padding: 0.2em 0.75em;
     margin-bottom: 0.5em;
     float: left;
     width: 48px;
+    margin-top: 10px;
 }
 
-.SurfacePro9{
+.hl-title{
     font-size: 35px;
     margin-bottom: 0.7em;
 }
 
-.text{
+.hl-text{
     margin-bottom: 1.25em;
 }
 
-.black{
+.blackblock{
     width: 120px;
     font-size: 16px;
     color: white;
@@ -76,22 +86,140 @@ body{
     background-color: black;
 }
 
-.box{
+.arrowblock{
+    width: 100%;
+    height: calc(662px - 597px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    width: 30px;
+    height: 30px;
+    padding: 0px 10px;
+}
+
+.arrow-left{
+    transform: rotate(180deg);
+}
+
+.dot{
+    width: 20px ;
+    height: 20px;
+    padding: 0px 10px;
+}
+
+.block-choose{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px 40px 20px;
+    padding: 40px 20px 80px 20px;
 }
 
-.margin{
+.margin-choose{
     margin-top: 8px; 
 }
 
-.flex{
+.flex-choose{
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin-top: 25px;
 }
 
+.flex-outimgbox{
+    display: flex;
+    justify-content: center;
+}
 
+.outimgtextbox{
+    width: 382px;
+    padding: 0px 12px;
+}
+
+.no-new{
+    height: 21px;
+    background-color: white;
+}
+
+.outimgtitle{
+    font-size: 30px;
+    margin-bottom: 0.7em;
+}
+
+.outimgtext{
+    margin-bottom: 15px;
+}
+
+.bluetext{
+    width: 120px;
+    font-size: 16px;
+    color: blue;
+    padding: 0.625rem 0rem;
+}
+.blue-arrow{
+    width: 20px;
+    height: 20px;
+}
+
+.topicbox{
+    position: relative;
+}
+
+.topicimg{
+    position: relative;
+    padding: 100px 150px;
+}
+
+.topictextbox{
+    position: absolute;
+    width: 570.66px;
+    top: 300px;
+    left: 300px;
+}
+
+.blueblock{
+    width: 65px;
+    font-size: 16px;
+    color: white;
+    padding: 0.625rem 0.75rem;
+    background-color: blue;
+}
+
+.topic-title{
+    font-size: 35px;
+    margin-bottom: 0.7em;
+    margin-top: 20px;
+}
+
+.annotation{
+    font-size: 35px;
+    width: 1600px;
+    margin: auto;
+    margin-bottom: 23px;
+}
+
+.track{
+    font-size: 1rem;
+    width: 1600px;
+    padding: 50px 150px 100px 150px;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+}
+
+.logo-f{
+    margin-left: 20px;
+}
+
+.list{
+    height: 388px;
+    width: 100%;
+    background-color: aqua;
+}
