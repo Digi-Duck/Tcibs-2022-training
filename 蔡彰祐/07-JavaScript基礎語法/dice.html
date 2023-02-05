@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var body = document.body;
+        function goRocket(e) {
+            // console.log(e.keyCode); //查鍵盤代碼
+            if (e.keyCode == 81) {
+                console.log("清除");
+            }
+        }
+        body.addEventListener('keydown', goRocket, false)
+    </script>
+
+    <script>
+        let people = 10;
+        let round = 5;
+        let peopledice = {};
+        for (let j = 0; j < people; j++) {
+            if (typeof (peopledice[j]) != Array) {
+                peopledice[j] = []
+            }
+            for (let i = 0; i < round; i++) {
+                if (typeof (peopledice[j][i]) != Array) {
+                    peopledice[j][i] = []
+                }
+                let dice = [getRandomInt(6), getRandomInt(6), getRandomInt(6)];
+                peopledice[j][i].push(dice)
+            }
+        }
+
+
+        // 骰骰子
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max + 1);
+        }
+        console.log(peopledice)
+    </script>
+</body>
+
+</html>

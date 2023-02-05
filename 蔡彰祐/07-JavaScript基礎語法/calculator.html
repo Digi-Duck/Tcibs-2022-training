@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンピューター</title>
+    <style>
+        #calculator {
+            width: calc(600px - 5px);
+            height: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: blanchedalmond;
+            padding: 0px 2.5px;
+        }
+
+        #show {
+            padding: 20px 10px;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        #history_number{
+            font-size: 30px;
+        }
+        #result_number{
+            font-size: 60px;
+        }
+
+        .calculator-btn {
+            cursor: pointer;
+            width: calc(25% - 5px);
+            margin: 0px 2.5px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+            font-size: 45px;
+        }
+
+        .calculator-number {
+            background-color: rgb(243, 241, 241);
+        }
+
+        .calculator-operation {
+            background-color: rgb(230, 228, 228);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="calculator">
+        <div id="show">
+            <div id="history_number"></div>
+            <div id="result_number"></div>
+        </div>
+
+        <div id="number7" class="calculator-btn calculator-number">7</div>
+        <div id="number8" class="calculator-btn calculator-number">8</div>
+        <div id="number9" class="calculator-btn calculator-number">9</div>
+        <div id="operation3" class="calculator-btn calculator-operation">x</div>
+        <div id="number4" class="calculator-btn calculator-number">4</div>
+        <div id="number5" class="calculator-btn calculator-number">5</div>
+        <div id="number6" class="calculator-btn calculator-number">6</div>
+        <div id="operation2" class="calculator-btn calculator-operation">-</div>
+        <div id="number1" class="calculator-btn calculator-number">1</div>
+        <div id="number2" class="calculator-btn calculator-number">2</div>
+        <div id="number3" class="calculator-btn calculator-number">3</div>
+        <div id="operation1" class="calculator-btn calculator-operation">+</div>
+        <div id="operation6" class="calculator-btn calculator-number">+/-</div>
+        <div id="number0" class="calculator-btn calculator-number">0</div>
+        <div id="operation9" class="calculator-btn calculator-number">.</div>
+        <div id="operation0" class="calculator-btn calculator-operation">=</div>
+    </section>
+
+
+    <script>
+        // 點擊按鈕
+        let history_number = [];
+        let clearnum = false;
+
+        // 數字鍵
+        document.querySelector("#number0").onclick = function () {
+            showoperation("0");
+        };
+        document.querySelector("#number1").onclick = function () {
+            showoperation("1");
+        };
+        document.querySelector("#number2").onclick = function () {
+            showoperation("2");
+        };
+        document.querySelector("#number3").onclick = function () {
+            showoperation("3");
+        };
+        document.querySelector("#number4").onclick = function () {
+            showoperation("4");
+        };
+        document.querySelector("#number5").onclick = function () {
+            showoperation("5");
+        };
+        document.querySelector("#number6").onclick = function () {
+            showoperation("6");
+        };
+        document.querySelector("#number7").onclick = function () {
+            showoperation("7");
+        };
+        document.querySelector("#number8").onclick = function () {
+            showoperation("8");
+        };
+        document.querySelector("#number9").onclick = function () {
+            showoperation("9");
+        };
+
+        // 運算式
+        document.querySelector("#operation0").onclick = function () {
+            showoperation("=");
+        };;
+        document.querySelector("#operation1").onclick = function () {
+            showoperation("+");
+        };;
+        document.querySelector("#operation2").onclick = function () {
+            showoperation("-");
+        };;
+
+        // 顯示
+        // 歷史紀錄
+        // document.querySelector("#history_number");
+        // 結果
+        // document.querySelector("#result_number");
+        function showoperation(x) {
+            let res = document.querySelector("#result_number");
+            let his = document.querySelector("#history_number");
+            if (clearnum == true) {
+                res.innerHTML = '';
+                his.innerHTML = '';
+                clearnum = false;
+            }
+
+            // 判斷是否點選數字鍵
+            if (Number.isInteger(Number(x)) == false) {
+                if (history_number.length <= 3) {
+                    history_number.push(res.innerHTML);
+                    history_number.push(x);
+                } else {
+                    // 先判斷 res 有沒有數字
+                    if (res.innerHTML == '') {
+                        history_number.pop(-1);
+                        history_number.push(x);
+                    } else {
+                        history_number.push(res.innerHTML);
+                        history_number.push(x);
+                    }
+                }
+
+                if (history_number.length >= 4 && x == '=') {
+                    let calculate = history_number.slice();
+                    let fir = Number(calculate[0]);
+                    calculate.shift();
+                    calculate.pop();
+
+                    for (let i = 0; i < calculate.length; i += 2) {
+                        if (calculate[i] == '+') {
+                            fir = fir + Number(calculate[i + 1]);
+                        }
+                        if (calculate[i] == '-') {
+                            fir = fir - Number(calculate[i + 1]);
+                        }
+                    }
+                    his.innerHTML = history_number.join('');
+                    res.innerHTML = fir;
+                    history_number = [];
+                    clearnum = true;
+                } else {
+                    his.innerHTML = history_number.join('');
+                    res.innerHTML = '';
+                }
+
+            } else {
+                res.innerHTML = res.innerHTML + x;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div id="player"></div>
+        <div id="show"></div>
+        <div id="drawcards">抽牌</div>
+        <div id="stepcards">停止</div>
+    </section>
+    <script>
+        let player = document.querySelector("#player");
+        let show = document.querySelector("#show");
+        let drawcards = document.querySelector("#drawcards");
+        let stepcards = document.querySelector("#stepcards");
+        // 亂入洗牌
+        let playingcards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
+        const cards = shuffleArray(playingcards);
+        let nowcards = 0;
+
+        let newplayer = 0;
+        // 發牌 (人數有幾個)
+        let people = 2;
+        let peoplecards = {};
+        let lastcards = {};
+        for (let i = 0; i < people; i++) {
+            if (typeof (peoplecards[i]) != Array) {
+                peoplecards[i] = [];
+            }
+            for (let j = 0; j < 2; j++) {
+                peoplecards[i].push(cards[nowcards]);
+                nowcards += 1;
+            }
+        }
+
+        player.innerHTML = "第" + Number(newplayer + 1) + "玩家";
+        show.innerHTML = peoplecards[newplayer].join(',');
+
+        drawcards.onclick = function () {
+            if (newplayer < people) {
+                peoplecards[newplayer].push(cards[nowcards]);
+                show.innerHTML = peoplecards[newplayer].join(',');
+                nowcards += 1;
+                let explode = explodecards(newplayer)[1];
+
+                if (explode == 1) {
+                    lastcards[newplayer] = peoplecards[newplayer];
+                    newplayer += 1;
+                    if (newplayer < people) {
+                        player.innerHTML = "第" + Number(newplayer + 1) + "玩家";
+                        show.innerHTML = peoplecards[newplayer].join(',');
+                    }
+                    console.log('你已經爆炸');
+                }
+            }
+
+            if (newplayer == people) {
+                clickwinner()
+            }
+        }
+
+        stepcards.onclick = function () {
+            lastcards[newplayer] = peoplecards[newplayer];
+            newplayer += 1;
+            if (newplayer < people) {
+                player.innerHTML = "第" + Number(newplayer + 1) + "玩家";
+                show.innerHTML = peoplecards[newplayer].join(',');
+            }
+            if (newplayer == people) {
+                clickwinner()
+            }
+
+        }
+
+        function explodecards(i) {
+            let su = 0;
+            let special_one = 0;
+            peoplecards[i].forEach(element => {
+                if (element > 10) {
+                    su += 10;
+                } else {
+                    su += element;
+                }
+                if (element == 1) {
+                    special_one += 1;
+                }
+            });
+            // 擴充功能 1 = 11
+            // if(special_one >= 1){
+            //     for (let i = 0; i < special_one; i++) {
+            //         su += 9;
+            //     }
+            // }
+            if (su > 21) {
+                return [su, 1];
+            } else {
+                return [su, 0];
+            }
+        }
+
+        function clickwinner() {
+            let winner = [];
+            for (let i = 0; i < people; i++) {
+                if (explodecards(i)[0] > 21) {
+                    winner.push(Number(21 - explodecards(i)[0]))
+                } else {
+                    winner.push(explodecards(i)[0])
+                }
+            }
+            const max = Math.max(...winner);
+            console.log(winner)
+            if(max < 0){
+                console.log("下次再接再厲");
+            }else{
+                const index = winner.indexOf(max);
+                console.log("第" + Number(index + 1) + "玩家獲勝");
+            }
+        }
+    </script>
+</body>
+
+</html>
