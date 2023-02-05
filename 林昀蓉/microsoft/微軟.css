@@ -2,7 +2,6 @@ body{
     margin: 0px;
 }
 #all{
-    background-color: antiquewhite;
     height: 100vh;
     width: 100%;
 }
@@ -94,7 +93,6 @@ body{
     margin-bottom: -2px;
 }
 .word1{
-    text-align: center;
     font-size: x-small;
     font-family: system-ui;
 }
@@ -120,8 +118,7 @@ body{
     background-image: url(https://img.ixintu.com/download/jpg/20200910/f9256155491e54bf5e99bf29eece0156_512_512.jpg!con);
 }
 #big-box{
-    background-color: aqua;
-    height: 542.06px;
+    height: 662px;
     width: 100%;
 }
 #box{
@@ -140,7 +137,7 @@ body{
     height: 212.39px;
     width: 100%;
 }
-.word2{
+.label{
     font-family: "Microsoft JhengHei";
     text-align: center;
     font-weight: bold;
@@ -153,7 +150,7 @@ body{
     height: 28px;
     margin-bottom: 8px;
 }
-#l{
+.tittle{
     font-family: system-ui;
     font-weight: 900;
     font-size: 2.155rem;
@@ -161,7 +158,7 @@ body{
     height: 44.39px;
     margin-bottom: 20px;
 }
-#m{
+.details{
     line-height: 24px;
     font-family: "Microsoft JhengHei";
     width: 100%;
@@ -175,6 +172,7 @@ body{
     background-color: black;
     height: 40px;
     width: 161.02px;
+    text-align: center;
 }
 #n:hover{
     background-color: rgb(43, 43, 43);
@@ -184,7 +182,6 @@ body{
     height: 67.25px;
     width: 10%;
     margin-top: -4px;
-    background-color:lightgreen;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -208,7 +205,7 @@ body{
     justify-content: center;
     margin-top: 50px;
 }
-#space{
+.space{
     float: left;
     height: 72px;
     margin: 16px;
@@ -230,22 +227,269 @@ body{
     text-decoration: underline;
 }
 #second{
-    background-color: aquamarine;
     width: 100%;
-    height: 150vh;
+    height: 200vh;
 }
-#four{
-    margin-top: 70px;
-    background-color: blue;
+.four{
     width: 100%;
-    height: 384.3px;
+    height: 420.91px;
     display: flex;
     justify-content: center;
 }
-#four-01{
+.four-01{
     float: left;
-    background-color: bisque;
     height: 100%;
-    width: 323.812px;
+    width: 382px;
     margin: 0px 12px;
+}
+.words-place-second{
+    margin-top: 48px;
+    width: 100%;
+    height: 154.8px;
+}
+.details2{
+    font-family: "Microsoft JhengHei";
+    width: 100%;
+    height: 48px;
+}
+.tittle2{
+    line-height: 34.8px;
+    font-family: system-ui;
+    font-weight: 800;
+    font-size: 1.8125rem;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.label2{
+    margin-top: 16px;
+    height: 40px;
+    color: #0067b8;
+    font-weight: 800;
+    font-family: system-ui;
+    float: left;
+}
+
+#link365-1{
+    width: 100px;
+    float: left;
+}
+#arrow{
+    float: left;
+    width: 20px;
+}
+#link365-2{
+    width: 135px;
+    float: left;
+    padding-left: 30px;
+}
+#arrow2{
+    float: left;
+}
+
+.label3{
+    margin-top: 16px;
+    width: 70px;
+    font-weight: 800;
+    font-family: system-ui;
+    text-align: center;
+}
+#new{
+    height: 30px;
+    margin-bottom: 16px;
+    line-height: 34.8px;
+    background-color: rgb(255, 181, 45);
+}
+.tittle3{
+    margin-top: 5px;
+    line-height: 30px;
+    font-family: system-ui;
+    font-weight: 800;
+    font-size: 1.8125rem;
+    width: 100%;
+}
+#arrow3{
+    float: left;
+}
+#link-surf{
+    width: 70px;
+    float: left;
+}
+
+#arrow4{
+    float: left;
+}
+#link-laptop{
+    width: 70px;
+    float: left;
+}
+
+#arrow5{
+    float: left;
+}
+#link-xbox{
+    width: 70px;
+    float: left;
+}
+
+#xbox-s{
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+}
+#xbox-img{
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-Hero-Xbox-Series-S:VP5-1596x600);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    position: relative;
+}
+#xbox-words-place{
+    height: 152.4px;
+    width: 504px;
+    position: absolute;left: 280px;top: 223.8px;
+}
+#details-xbox-s{
+    height: 24px;
+    margin-bottom: 24px;
+}
+#link-xbox-s{
+    padding: 10px 12px;
+    height: 16;
+    color: white;
+    background-color: #0067b8;
+    border-radius: 3%;
+}
+
+#tittle-business{
+    font-size: 2.315rem;
+    width: 1596px;
+    padding-top: 90px;
+    padding-bottom: 1.25rem;
+    margin: auto;
+}
+#new-surf-b{
+    background-color: rgb(255, 181, 45);
+    height: 16px;
+    line-height: 16px;
+    width: 48px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+}
+#tittle-surf-b{
+    margin-bottom: 16px;
+}
+#link-surf-b{
+    float: left;
+    width: 70px;
+}
+#arrow-surf-b{
+    float: left;
+}
+
+#tittle-teams{
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+#details-teams{
+    height: 24px;
+}
+#link-teams{
+    margin-top: 20px;
+}
+#arrow-teams{
+    margin-top: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+#tittle-cloud{
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+#link-cloud{
+    margin-top: 20px;
+}
+#arrow-cloud{
+    width: 20px;
+    text-align: center;
+}
+
+#tittle-fix{
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+#link-fix{
+    margin-top: 20px;
+}
+#arrow-fix{
+    width: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+#promote{
+    margin-top: 70px;
+    width: 100%;
+    height: 32px;
+}
+#promote-place{
+    margin: auto;
+    height: 100%;
+    width: 1600px;
+}
+#promote-words{
+    float: left;
+    width: 120px;
+    font-family: "Microsoft JhengHei";
+    line-height: 32px;
+}
+#facebook{
+    float: left;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Facebook%202x?scl=1);
+    background-size: cover;
+}
+#youtube{
+    margin-left: 15px;
+    float: left;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/YouTube%202x?scl=1);
+    background-size: cover;
+}
+
+#bottom{
+    margin-top: 40px;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 388px;
+}
+#straight{
+    margin: auto;
+    background-color: aquamarine;
+    width: 1600px;
+    height: 316px;
+    display: flex;
+    justify-content: space-between;
+}
+#horizontal{
+    margin: auto;
+    background-color: coral;
+    width: 1600px;
+    height: 26px;
+    padding: 30px 95.141px 16px;
+}
+
+.size{
+    background-color: wheat;
+    width: 266.66px;
+    height: 316px;
+}
+.bottom-words{
+    font-size: x-small;
+    font-family: system-ui;
+    color: rgb(87, 87, 87);
+    
 }
