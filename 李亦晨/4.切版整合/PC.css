@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+}
+
+.all {
+    position: relative;
+}
+
+.left {
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+}
+
+.right {
+    width: calc(100% - 400px);
+    height: 100vh;
+    background-color: rgba(75, 59, 59, 0.329);
+    position: absolute;
+    left: 400px;
+}
+
+.icon {
+    width: 108px;
+    height: 108px;
+    background-image: url(/李亦晨/4.切版整合/image/th.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.write {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+}
+
+.allphoto {
+    width: 1200px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo1 {
+    width: 400px;
+    height: 500px;
+    background-image: url(/李亦晨/4.切版整合/image/E5J1Dx8VgAQV3mz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.photo2 {
+    width: 400px;
+    height: 500px;
+    background-image: url(/李亦晨/4.切版整合/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.photo3 {
+    width: 400px;
+    height: 500px;
+    background-image: url(/李亦晨/4.切版整合/image/643x0w.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+p {
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
+}
+
+/* small-screen */
+@media (max-width:1600px) {
+
+    .all {
+        position: relative;
+    }
+
+    .left {
+        width: 200px;
+        height: 667px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+    }
+
+    /* .right {
+        width: 1080px;
+        height: 100vh;
+        background-color: rgba(75, 59, 59, 0.329);
+        position: absolute;
+        left: 200px;
+    } */
+
+    .right {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+
+    .icon {
+        width: 108px;
+        height: 108px;
+        background-image: url(/李亦晨/4.切版整合/image/th.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    .write {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 200px;
+    }
+
+    .allphoto {
+        width: 900px;
+        height: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .photo1 {
+        width: 890px;
+        height: 295px;
+        background-image: url(/李亦晨/4.切版整合/image/E5J1Dx8VgAQV3mz.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        border-radius: 10px;
+    }
+
+    .photo2 {
+        width: 445px;
+        height: 295px;
+        background-image: url(/李亦晨/4.切版整合/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        border-radius: 10px;
+    }
+
+    .photo3 {
+        width: 445px;
+        height: 295px;
+        background-image: url(/李亦晨/4.切版整合/image/643x0w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        border-radius: 10px;
+    }
+
+    p {
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+    }
+}
+
+/* tablet */
+@media (max-width:1100px) {
+    body {
+        margin: 0;
+    }
+    .all {
+        position: relative;
+    }
+
+    .left {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        height: 100px;
+        width: 768px;
+        background-color: rgb(255, 255, 255);
+        position: unset;
+    }
+
+    .right {
+        width: 100%;
+        /* height: 100vh; */
+        position: unset;
+        left: unset;
+    }
+
+    /* 
+    .right {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 95%;
+    } */
+
+    .icon {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 50px;
+        height: 50px;
+        background-image: url(/李亦晨/4.切版整合/image/th.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 2%;
+        left: 20px;
+    }
+
+    .write {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: 230px;
+    }
+
+    .allphoto {
+        height: unset;
+        width: unset;
+        top: unset;
+        width: 768px;
+        height: 913px;
+        left: unset;
+        transform: unset;
+
+    }
+
+    .photo1 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 99%;
+        height: 407px;
+        left: 3px;
+        top: 3px;
+        background-image: url(/李亦晨/4.切版整合/image/643x0w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .photo2 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 49%;
+        height: 407px;
+        top: 423px;
+        left: 3px;
+        background-image: url(/李亦晨/4.切版整合/image/E5J1Dx8VgAQV3mz.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .photo3 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 49%;
+        height: 407px;
+        top: 423px;
+        left: 384px;
+        background-image: url(/李亦晨/4.切版整合/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    p {
+        text-align: center;
+        line-height: 20px;
+        font-size: 40px;
+    }
+}
+
+/* phone */
+@media (max-width:768px) {
+    body {
+        margin: 0;
+    }
+
+    .all {
+        position: relative;
+    }
+
+    .left {
+        height: 60px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+    }
+
+    .right {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(75, 59, 59, 0.329);
+        position: absolute;
+        top: 50px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        background-image: url(/李亦晨/4.切版整合/image/th.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 6px;
+        left: 50%;
+    }
+
+    .allphoto {
+        height: unset;
+        width: unset;
+        top: unset;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(75, 59, 59, 0.329);
+        position: unset;
+    }
+
+    .photo1 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        width: 100%;
+        height: 25%;
+        background-image: url(/李亦晨/4.切版整合/image/643x0w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .photo2 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        top: 210px;
+        width: 100%;
+        height: 25%;
+        background-image: url(/李亦晨/4.切版整合/image/E5J1Dx8VgAQV3mz.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .photo3 {
+        height: unset;
+        width: unset;
+        top: unset;
+        left: unset;
+        top: 420px;
+        width: 100%;
+        height: 25%;
+        background-image: url(/李亦晨/4.切版整合/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .write {
+        width: 50px;
+        height: 50px;
+        left: 57%;
+        top: -2px;
+
+    }
+
+    p {
+        line-height: 0px;
+        font-size: 25px;
+    }
+}
