@@ -10,25 +10,27 @@
         body {
             margin: 0;
         }
+
         /* float 、position */
         #all {
-            width:100vw;
+            width: 100vw;
             height: 100vh;
             background-color: purple;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-       
 
-        #main{
-            width:500px;
+
+        #main {
+            width: 500px;
             height: 500px;
             padding: 15px;
             background-color: aquamarine;
             display: flex;
-            
-        } 
+
+        }
+
         .box {
             width: calc(33.33% - 10px);
             height: 500px;
@@ -41,6 +43,28 @@
             margin-right: 0px;
             order: -1;
         }
+
+        #top01 {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+
+
+        @media (max-width:1200px) {
+            #top01 {
+                width: 100px;
+                height: 100px;
+                right: unset;
+                left: 0px;
+                
+            }
+        }
+
         /* 
         @media screen and (max-width:1024px) {
             .box:nth-child(1) {
@@ -65,6 +89,7 @@
             <div class="box">2</div>
             <div class="box box0">3</div>
         </div>
+        <div id="top01"></div>
     </div>
 </body>
 
