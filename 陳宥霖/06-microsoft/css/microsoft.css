@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#lastbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: end;
+}
+
+.small {
+    width: 266.6px;
+    padding: 0px 12px;
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.big {
+    width: 266.6px;
+    padding: 0px 12px;
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.word {
+    font-size: 11px;
+    padding: 8px 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bigword {
+    font-size: 15px;
+    padding: 36px 0px 4px;
+    text-align: left;
+}
+
+.word:hover {
+    text-decoration: underline;
+}
+
+#lastallbox {
+    width: 100%;
+    height: 388px;
+    margin: 48px 0px;
+    background-color: #f2f2f2;
+}
+
+.bottomwords {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+}
+
+.words{
+    padding-right:30px;
+}
