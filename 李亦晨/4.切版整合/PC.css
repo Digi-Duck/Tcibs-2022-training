@@ -14,11 +14,11 @@ body {
 }
 
 .right {
-    width: calc(100% - 400px);
+    width: calc(100% - 200px);
     height: 100vh;
     background-color: rgba(75, 59, 59, 0.329);
     position: absolute;
-    left: 400px;
+    left: 200px;
 }
 
 .icon {
@@ -248,11 +248,9 @@ p {
         height: unset;
         width: unset;
         top: unset;
-        width: 768px;
-        height: 913px;
         left: unset;
         transform: unset;
-
+        width: 768px;
     }
 
     .photo1 {
@@ -329,7 +327,7 @@ p {
 
     .right {
         width: 100%;
-        height: 100vh;
+        height: 94.6vh;
         background-color: rgba(75, 59, 59, 0.329);
         position: absolute;
         top: 50px;
@@ -344,7 +342,6 @@ p {
         background-repeat: no-repeat;
         position: absolute;
         top: 6px;
-        left: 50%;
     }
 
     .allphoto {
@@ -362,8 +359,9 @@ p {
         width: unset;
         top: unset;
         left: unset;
+        border-radius: unset;
         width: 100%;
-        height: 25%;
+        height: 33%;
         background-image: url(/李亦晨/4.切版整合/image/643x0w.jpg);
         background-position: center;
         background-size: cover;
@@ -375,9 +373,10 @@ p {
         width: unset;
         top: unset;
         left: unset;
-        top: 210px;
+        border-radius: unset;
+        top: 291px;
         width: 100%;
-        height: 25%;
+        height: 33%;
         background-image: url(/李亦晨/4.切版整合/image/E5J1Dx8VgAQV3mz.jpg);
         background-position: center;
         background-size: cover;
@@ -389,9 +388,10 @@ p {
         width: unset;
         top: unset;
         left: unset;
-        top: 420px;
+        border-radius: unset;
+        top: 581px;
         width: 100%;
-        height: 25%;
+        height: 33%;
         background-image: url(/李亦晨/4.切版整合/image/H2x1_NSwitchDS_SkyChildrenOfTheLight_EN_image1600w.jpg);
         background-position: center;
         background-size: cover;
@@ -401,7 +401,7 @@ p {
     .write {
         width: 50px;
         height: 50px;
-        left: 57%;
+        left: 58px;
         top: -2px;
 
     }
