@@ -1,31 +1,46 @@
-#second{
+#second {
     width: 100%;
     height: 200vh;
 }
-.four{
-    width: 100%;
-    height: 420.91px;
+
+.four {
+    width: 85%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
 }
-.four-01{
-    float: left;
+
+.four-01 {
+    /* float: left; */
     height: 100%;
-    width: 20%;
-    margin: 0px 12px;
+    
+    width: 25%;
+    padding: 0px 12px;
+    box-sizing: border-box;
     /* 382 */
+
 }
-.words-place-second{
+.four .four-01:nth-child(1) {
+    padding-left: 0px;
+}
+.four .four-01:nth-child(4) {
+    padding-right: 0px;
+}
+
+.words-place-second {
     margin-top: 48px;
     width: 100%;
     height: 154.8px;
 }
-.details2{
+
+.details2 {
     font-family: "Microsoft JhengHei";
     width: 100%;
     height: 48px;
 }
-.tittle2{
+
+.tittle2 {
     line-height: 34.8px;
     font-family: system-ui;
     font-weight: 800;
@@ -33,7 +48,8 @@
     width: 100%;
     margin-bottom: 16px;
 }
-.label2{
+
+.label2 {
     margin-top: 16px;
     height: 40px;
     color: #0067b8;
@@ -42,37 +58,42 @@
     float: left;
 }
 
-#link365-1{
+#link365-1 {
     width: 100px;
     float: left;
 }
-#arrow{
+
+#arrow {
     float: left;
     width: 20px;
 }
-#link365-2{
+
+#link365-2 {
     width: 135px;
     float: left;
     padding-left: 30px;
 }
-#arrow2{
+
+#arrow2 {
     float: left;
 }
 
-.label3{
+.label3 {
     margin-top: 16px;
     width: 70px;
     font-weight: 800;
     font-family: system-ui;
     text-align: center;
 }
-#new{
+
+#new {
     height: 30px;
     margin-bottom: 16px;
     line-height: 34.8px;
     background-color: rgb(255, 181, 45);
 }
-.tittle3{
+
+.tittle3 {
     margin-top: 5px;
     line-height: 30px;
     font-family: system-ui;
@@ -80,45 +101,54 @@
     font-size: 1.8125rem;
     width: 100%;
 }
-#arrow3{
+
+#arrow3 {
     float: left;
 }
-#link-surf{
+
+#link-surf {
     width: 70px;
     float: left;
 }
 
-#arrow4{
+#arrow4 {
     float: left;
 }
-#link-laptop{
+
+#link-laptop {
     width: 70px;
     float: left;
 }
 
-#arrow5{
+#arrow5 {
     float: left;
 }
-#link-xbox{
+
+#link-xbox {
     width: 70px;
     float: left;
 }
 
-#xbox-s{
+#xbox-s {
     margin-top: 90px;
     width: 100%;
     height: 600px;
 }
-#xbox-words-place{
+
+#xbox-words-place {
     height: 152.4px;
     width: 504px;
-    position: absolute;left: 10%;top: 35% ;
+    position: absolute;
+    left: 10%;
+    top: 35%;
 }
-#details-xbox-s{
+
+#details-xbox-s {
     height: 24px;
     margin-bottom: 24px;
 }
-#link-xbox-s{
+
+#link-xbox-s {
     padding: 10px 12px;
     height: 16;
     color: white;
@@ -126,14 +156,15 @@
     border-radius: 3%;
 }
 
-#tittle-business{
+#tittle-business {
     font-size: 2.315rem;
     width: 85%;
     padding-top: 90px;
     padding-bottom: 1.25rem;
     margin: auto;
 }
-#new-surf-b{
+
+#new-surf-b {
     background-color: rgb(255, 181, 45);
     height: 16px;
     line-height: 16px;
@@ -141,82 +172,96 @@
     padding: 6px 12px;
     margin-bottom: 10px;
 }
-#tittle-surf-b{
+
+#tittle-surf-b {
     margin-bottom: 16px;
 }
-#link-surf-b{
+
+#link-surf-b {
     float: left;
     width: 70px;
 }
-#arrow-surf-b{
+
+#arrow-surf-b {
     float: left;
 }
 
-#tittle-teams{
+#tittle-teams {
     margin-top: 48px;
     margin-bottom: 16px;
 }
-#details-teams{
+
+#details-teams {
     height: 24px;
 }
-#link-teams{
+
+#link-teams {
     margin-top: 20px;
 }
-#arrow-teams{
+
+#arrow-teams {
     margin-top: 20px;
     width: 20px;
     text-align: center;
 }
 
-#tittle-cloud{
+#tittle-cloud {
     margin-top: 48px;
     margin-bottom: 16px;
 }
-#link-cloud{
+
+#link-cloud {
     margin-top: 20px;
 }
-#arrow-cloud{
+
+#arrow-cloud {
     width: 20px;
     text-align: center;
 }
 
-#tittle-fix{
+#tittle-fix {
     margin-top: 48px;
     margin-bottom: 16px;
 }
-#link-fix{
+
+#link-fix {
     margin-top: 20px;
 }
-#arrow-fix{
+
+#arrow-fix {
     width: 20px;
     text-align: center;
     line-height: 25px;
 }
 
-#promote{
+#promote {
     margin-top: 70px;
     width: 100%;
     height: 32px;
 }
-#promote-place{
+
+#promote-place {
     margin: auto;
     height: 100%;
-    width: 1600px;
+    width: 85%;
 }
-#promote-words{
+
+#promote-words {
     float: left;
     width: 120px;
     font-family: "Microsoft JhengHei";
     line-height: 32px;
 }
-#facebook{
+
+#facebook {
     float: left;
     width: 32px;
     height: 32px;
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Facebook%202x?scl=1);
     background-size: cover;
 }
-#youtube{
+
+#youtube {
     margin-left: 15px;
     float: left;
     width: 32px;
@@ -224,26 +269,26 @@
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/YouTube%202x?scl=1);
     background-size: cover;
 }
-#xbox-img{
+
+#xbox-img {
     width: 85%;
     margin: auto;
     position: relative;
 }
-@media screen and (max-width:1400px){
-    .tittle2{
-    line-height: 34.8px;
-    font-family: system-ui;
-    font-weight: 800;
-    font-size: 1.5rem;
-    width: 100%;
-    margin-bottom: 0.75rem
+
+@media screen and (max-width:1400px) {
+    .tittle2 {
+        line-height: 34.8px;
+        font-family: system-ui;
+        font-weight: 800;
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 0.75rem
+    }
 }
-}
-@media screen and (max-width:1085px){
-    .four-01{
-        float: left;
-        height: 100%;
-        width: 20%;
-        margin: 0px 12px;
+
+@media screen and (max-width:1085px) {
+    .media {
+        width: 50%;
     }
 }
