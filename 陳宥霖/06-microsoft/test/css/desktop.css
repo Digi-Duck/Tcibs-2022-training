@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 微軟正黑體;
+}
+
+.title_bar {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+}
+
+#content_PC div {
+    float: left;
+    padding: 13px;
+    margin-top: 3px;
+    font-size: small;
+}
+
+#content_PC div:hover {
+    cursor: pointer;
+    box-shadow: 0 2px;
+    padding-bottom: 2px;
+}
+
+#right div {
+    float: left;
+    padding: 10px;
+    margin-top: 6px;
+    font-size: small;
+}
+
+/* ---------------- */
+
+.content_box_1 {
+    width: 100%;
+    height: 30vw;
+}
+
+.content_box_2 {
+    width: 100%;
+    height: 250px;
+}
+
+.surface_photo {
+    width: 100%;
+    height: 100%;
+    background-image: url(../photos/Surface-Pro-9-All-Colors-desktop.jpeg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --------------- */
+#sel_D {
+    float: left;
+}
+
+#chooser {
+    margin: auto;
+    float: left;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+}
+
+.content_box_3 {
+    width: 100%;
+    height: fit-content;
+}
+
+#product_box {
+    float: left;
+}
+
+/* ---------------- */
+.content_box_4 {
+    width: calc(100% - 75px);
+    height: fit-content;
+    margin-left: 75px;
+}
+
+.gamepass {
+    background-image: url(../photos/GamePass_Bg.jpeg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#business_box {
+    float: left;
+}
+
+/* --------------- */
+.content_box_5 {
+    width: 100%;
+    height: fit-content;
+}
+
+/* ----------------- */
+
+.imformation_box {
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    height: 316px;
+    width: 100%;
+    float: left;
+}
+.c-uhff-nav-group{
+    width: 15%;
+    float:left;
+}
+.c-uhff-nav{
+    margin: 0 auto;
+    max-width: calc(1600px + 10%);
+    padding:0 5%;
+    box-sizing: inherit;
+    width: auto;
+    height: 100%;
+}
+.information_text{
+    float:left;
+    max-width: 16.6666666667%;
+}
+
+.c-uhff-link {
+    padding: 8px 0 8px;
+    font-size: 11px;
+    line-height: 16px;
+    font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: #616161;
+}
+
+.c-uhff-base {
+    background: #f2f2f2;
+    height: calc(72px - 46px);
+    margin: 0 auto;
+    max-width: calc(1600px + 10%);
+    padding: 30px 5% 16px;
+}
