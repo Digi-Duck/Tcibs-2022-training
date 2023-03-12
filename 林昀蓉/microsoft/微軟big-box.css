@@ -1,0 +1,109 @@
+#big-box{
+    height: 662px;
+    width: 100%;
+}
+#box{
+    position: relative;
+}
+#box2{
+    width: 570.66px;
+    height: 100%;
+    position: absolute;top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+#information{
+    height: 212.39px;
+    width: 100%;
+}
+.label{
+    font-family: "Microsoft JhengHei";
+    text-align: center;
+    font-weight: bold;
+}
+#k{
+    color:brown;
+    line-height: 28px;
+    background-color: white;
+    width: 72px;
+    height: 28px;
+    margin-bottom: 8px;
+}
+.tittle{
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 2.155rem;
+    width: 100%;
+    height: 44.39px;
+    margin-bottom: 20px;
+}
+.details{
+    line-height: 24px;
+    font-family: "Microsoft JhengHei";
+    width: 100%;
+    height: 48px;
+    margin-bottom: 24px;
+}
+#n{
+    color: white;
+    border-radius: 3px;
+    line-height: 40px;
+    background-color: black;
+    height: 40px;
+    width: 161.02px;
+    text-align: center;
+}
+#n:hover{
+    background-color: rgb(43, 43, 43);
+}
+#box-control{
+    margin: auto;
+    height: 67.25px;
+    width: 10%;
+    margin-top: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.word3{
+    line-height: 67.31px;
+    font-family: "MWF-MORAY-MDL2";
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+#box-control-2{
+    margin-left: 16px;
+}
+#box-control-3{
+    margin-right: 16px;
+}
+#windows{
+    width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.space{
+    float: left;
+    height: 72px;
+    margin: 16px;
+}
+#pic{
+    margin: auto;
+    margin-bottom: 8px;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+}
+#word4{
+    font-family: system-ui;
+    font-weight: 400;
+    font-size :14px;
+    margin: auto;
+    color:#0067b8;
+    text-align: center;
+    text-decoration: underline;
+}
