@@ -2,19 +2,20 @@
     background-color: rgb(236, 236, 236);
     width: 100%;
     height: 388px;
+    margin-top: 300px;
 }
 #straight{
     margin: auto;
-    width: 1600px;
+    width: 1370px;
     height: 316px;
     display: flex;
     justify-content: space-between;
 }
 #horizontal{
     margin: auto;
-    width: 1600px;
+    width: 1370px;
     height: 26px;
-    padding: 30px 95.141px 16px;
+    padding: 30px 0px 16px;
 }
 
 .size{
@@ -43,8 +44,13 @@
     line-height: 1.5;
     padding-right: 24px;
     float: left;
+    color: #616161;
 }
 #horizontal-left{
+    font-family: system-ui;
+    font-size: x-small;
+    font-weight: 400;
+    line-height: 1.5;
     float: left;
 }
 #horizontal-right{
