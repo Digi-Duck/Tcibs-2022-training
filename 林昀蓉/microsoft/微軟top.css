@@ -9,7 +9,7 @@
     justify-content: space-between;
     margin: auto;
     height: 100%;
-    width: 85%;
+    width: 90%;
 }
 
 #top-left {
@@ -22,15 +22,14 @@
 }
 
 #logo {
-    margin-right: 6px;
     float: left;
-    padding: 15.5px 14.5px;
+    padding: 15.5px 0px;
     height: 23px;
-    width: 108px;
+    width: 123px;
     background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80%
+    background-size: 90%
 }
 
 #top-left .word {
@@ -45,7 +44,6 @@
 }
 
 .top {
-    margin: 0px 6px;
     float: left;
     height: 100%;
     display: flex;
@@ -129,7 +127,7 @@
     background-image: url(https://img.ixintu.com/download/jpg/20200910/f9256155491e54bf5e99bf29eece0156_512_512.jpg!con);
 }
 
-@media screen and (max-width:1780px) {
+/* @media screen and (max-width:1780px) {
     .top {
         margin: 0px;
         float: left;
@@ -137,8 +135,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
-}
+} */
 
 @media screen and (max-width: 1400px) {
     .none {
@@ -162,5 +161,30 @@
     #j {
         padding: 0px;
         width: 0px;
+    }
+}
+@media screen and (max-width: 860px) {
+    #g{
+        width: 0px;
+    }
+    .none-860 {
+        display: none;
+    }
+    #logo{
+        margin: 0px;
+        justify-self: end;
+    }
+    #top2{
+        width: 100%;
+        
+    }
+    #top-right{
+        margin-right: 12px;
+    }
+    #top-left{
+        float: none;
+        width: 274px;
+        margin: auto;
+        display: grid;
     }
 }
