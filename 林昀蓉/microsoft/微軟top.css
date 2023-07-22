@@ -127,6 +127,10 @@
     background-image: url(https://img.ixintu.com/download/jpg/20200910/f9256155491e54bf5e99bf29eece0156_512_512.jpg!con);
 }
 
+.top-left860{
+    display: none;
+}
+
 /* @media screen and (max-width:1780px) {
     .top {
         margin: 0px;
@@ -186,5 +190,13 @@
         width: 274px;
         margin: auto;
         display: grid;
+    }
+    .top-left860{
+        display: block;
+    }
+    .top860{
+        text-align: center;
+        float: left;
+        width: 41px;
     }
 }
