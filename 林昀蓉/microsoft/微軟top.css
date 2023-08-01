@@ -142,6 +142,10 @@
     display: none;
 }
 
+.top-left860{
+    display: none;
+}
+
 /* @media screen and (max-width:1780px) {
     .top {
         margin: 0px;
