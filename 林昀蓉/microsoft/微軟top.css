@@ -146,6 +146,10 @@
     display: none;
 }
 
+#top860{
+    display: none;
+}
+
 /* @media screen and (max-width:1780px) {
     .top {
         margin: 0px;
@@ -217,5 +221,8 @@
         display: block;
         width: 34px;
         height: 48px;
+    }
+    #top860{
+        display: block;
     }
 }
