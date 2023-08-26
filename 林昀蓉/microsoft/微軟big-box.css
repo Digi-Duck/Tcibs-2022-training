@@ -88,6 +88,7 @@
     margin-top: 50px;
 }
 .space{
+    background-color: navajowhite;
     float: left;
     height: 72px;
     margin: 16px;
@@ -95,14 +96,14 @@
 #pic{
     margin: auto;
     margin-bottom: 8px;
-    height: 40px;
     width: 40px;
+    height: 40px;
     background-repeat: no-repeat;
 }
 #word4{
     font-family: system-ui;
-    font-weight: 400;
-    font-size :14px;
+    font-weight: bold;
+    font-size: 80%;
     margin: auto;
     color:#0067b8;
     text-align: center;
@@ -110,7 +111,9 @@
 }
 @media screen and (max-width:1084px){
     #information{
-        background-color: aqua;
+        background-color: white;
         width: 95%;
+        margin: 0px;
+        margin-top: 550px;
     }
 }

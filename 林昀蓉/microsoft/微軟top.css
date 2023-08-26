@@ -108,8 +108,7 @@
 }
 
 #i {
-    width: 55px;
-    padding-right: 20px;
+    width: 71px;
 }
 
 #j {
@@ -150,7 +149,7 @@
     display: none;
 }
 
-/* @media screen and (max-width:1780px) {
+@media screen and (max-width:1780px) {
     .top {
         margin: 0px;
         float: left;
@@ -160,7 +159,7 @@
         justify-content: center;
         
     }
-} */
+}
 
 @media screen and (max-width: 1400px) {
     .none {
