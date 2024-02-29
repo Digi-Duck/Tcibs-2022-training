@@ -1,0 +1,15 @@
+#logo{
+    width: 500px;
+    height: 400px;
+    background-image: url(../54th/img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 230%;
+    padding-top: 100px;
+    /* background-color: aqua; */
+}
+.tittle{
+    float: left;
+    text-align: center;
+
+}
