@@ -17,7 +17,6 @@ function checkLogin($account, $password)
 
     if($account == $login['account'] && $password == $login['password'])
     {
-        //認證是一個職員 SESSION
         session_start();
         $_SESSION['account'] = $account;
         header('Location: http://localhost/54th/staff.php');
@@ -26,5 +25,45 @@ function checkLogin($account, $password)
     {   
         header('Location: http://localhost/54th/login.php');
     }
+}
+
+if($op=='newcomment')
+{
+    newcomment();
+}
+function newcomment(){
+
+    global $dbConnection;
+
+    //儲存留言
+    $sql = "INSERT INTO `54th`.`comment` (
+        `name`, 
+        `comment`,
+         `phone`, 
+         `email`, 
+         `password`,
+         `time`
+         ) VALUES (
+         '{$_POST['name']}', 
+         '{$_POST['comment']}',
+         '{$_POST['phone']}',
+         '{$_POST['email']}',
+         '{$_POST['password']}',
+         '".date('Y-m-d H:i:s')."'
+         )";
+
+    //寫入MySQL資料庫
+    if(mysqli_query($dbConnection, $sql))
+    {
+        header('Location: http://localhost/54th/new-comment.php');
+    }
+    else{
+
+    }
+   
+}
+if($op=='reset')
+{
+    header('Location: http://localhost/54th/new-comment.php');
 }
 ?>

@@ -2,6 +2,7 @@
 
 <form action="function.php?op=checkLogin" method="post">
     
+    <br>
     <h1>管理員登入</h1>
 
     <label for="account">帳號:</label>

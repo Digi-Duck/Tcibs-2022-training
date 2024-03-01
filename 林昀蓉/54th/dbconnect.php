@@ -7,7 +7,4 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-//echo "成功連線";
-
-//將文字編碼設為UTF-8以正確顯示中文
 mysqli_set_charset($dbConnection, "utf8");
