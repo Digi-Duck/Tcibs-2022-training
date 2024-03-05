@@ -11,7 +11,7 @@
 .tittle{
     float: left;
     text-align: center;
-    /* padding-right: 30px; */
+    padding-right: 30px;
 
 }
 #tittle-2nd{
@@ -19,5 +19,10 @@
     background-color: blanchedalmond;
 }
 #comment-link{
-    padding-left: 100px;
+    padding-left: 50px;
+    float: left;
+}
+#cmt-tittle{
+    width: 220px;
+    float: left;
 }

@@ -1,13 +1,10 @@
 <?php
 include_once 'dbconnect.php';
 include_once 'header.php';
+include_once 'new-cmt-header.php';
 ?>
-<br>
-    <h1 id="tittle-2nd">訪客留言-新增
-        <a href="../54th/comment.php" id="new-comment">回留言列表</a><br>
-    </h1><br>
 
-    <form action="function.php?op=newcomment" method="post">
+<form action="function.php?op=newcomment" method="post">
   
     <label for="name">您的稱呼:</label>
     <input type="text" id="name" name="name"><br/>

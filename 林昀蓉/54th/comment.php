@@ -3,9 +3,10 @@ include_once 'dbconnect.php';
 include_once 'header.php';
 ?>
     <br>
-    <h1 id="tittle-2nd">訪客留言列表
-        <a href="../54th/new-comment.php" id="comment-link">新增留言</a><br>
-        <a href="../54th/edit-cmt.php" id="comment-link">留言編輯</a>
+    <h1 id="tittle-2nd">
+        <div id="cmt-tittle">訪客留言列表</div>
+        <a href="../54th/new-comment.php" id="comment-link">新增留言</a>
+        <a href="../54th/edit-cmt.php" id="comment-link">留言編輯</a><br>
     </h1>
 
 <?php
