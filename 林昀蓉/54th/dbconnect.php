@@ -8,3 +8,4 @@ if (mysqli_connect_errno()) {
 }
 
 mysqli_set_charset($dbConnection, "utf8");
+$dbConnection->query('SET time_zone = "+8:00"');

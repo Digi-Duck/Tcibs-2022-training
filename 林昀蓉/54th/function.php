@@ -59,13 +59,9 @@ function newcomment(){
     }
     else{
 
-    }
-   
+    }   
 }
-if($op=='reset')
-{
-    header('Location: http://localhost/54th/new-comment.php');
-}
+
 
 if($op=='search')
 {
@@ -74,82 +70,114 @@ if($op=='search')
 function search(){
     global $dbConnection; 
 
-     // Escape the search string and trim
-     // all whitespace
-     $searchString = mysqli_real_escape_string($dbConnection, trim(htmlentities($_POST['search'])));
 
-     // Check for empty strings and non-alphanumeric
-     // characters.
-     // Also, check if the string length is less than
-     // three. If any of the checks returns "true",
-     // return "Invalid search string", and
-     // kill the script.
+    $searchString = mysqli_real_escape_string($dbConnection, trim(htmlentities($_POST['search'])));
+
      if ($searchString === "" || !ctype_alnum($searchString) ) {
          echo "Invalid search string";
          exit();
      }
 
-     // We are using a prepared statement with the
-     // search functionality to prevent SQL injection.
-     // So, we need to prepend and append the search
-     // string with percent signs
-     $searchString = "%$searchString%";
+    //  $searchString = "%$searchString%";
 
-     // The prepared statement
      $sql = "SELECT * FROM comment WHERE password LIKE ?";
 
-     // Prepare, bind, and execute the query
      $prepared_stmt = $dbConnection->prepare($sql);
      $prepared_stmt->bind_param('s', $searchString);
      $prepared_stmt->execute();
 
-     // Fetch the result
+     
      $result = $prepared_stmt->get_result();
 
      if ($result->num_rows === 0) {
-         // No match found
+         
          echo "No match found";
-         // Kill the script
+         
          exit();
 
      } else {
-         // Process the result(s)
+         
          while ($row = mysqli_fetch_assoc($result)) {
-            include_once 'new-cmt-header.php';
+            include_once('dbconnect.php');  
+            include_once('header.php'); 
+            include_once('new-cmt-header.php'); 
+            include_once('edit-part.php');
+            // header('Location: http://localhost/54th/edit-cmt2.php');
             echo '<h1>您的留言：</h1>';
             echo '<div class="edit-cmt">';
             echo '您的名稱 : '.$row['name'];
+
+            // $cmtid = " SELECT `id` FROM `comment` WHERE `name` = '{$row['name']}' ";
+            // $prepared_stmt->bind_param('s', $cmtid);
+            // $prepared_stmt->execute();
+
             ?>
             <form action="function.php?op=edit-cmt" method="post">
-                <input type="text" id="name" name="name" placeholder="修改名稱"><br/>
+            <?php
+                $search = $_POST['search'];
+            ?>
+                <input type="text" id="name1" name="name1" placeholder="修改名稱"><br/>
                 <br/>
             <?php
             echo '您的留言 : '.$row['comment'].'<br/>';
             ?>
-                <input type="text" id="comment" name="comment" placeholder="修改留言"><br/>
+                <input type="text" id="comment1" name="comment1" placeholder="修改留言"><br/>
                 <br/>
             <?php
             echo '您的電話 : '.$row['phone'].'<br/>';
             ?>
-                <input type="text" id="phone" name="phone" placeholder="修改電話"><br/>
+                <input type="text" id="phone1" name="phone1" placeholder="修改電話"><br/>
                 <br/>
             <?php
             echo '您的電郵 : '.$row['email'].'<br/>';
             ?>
-                <input type="text" id="phone" name="phone" placeholder="修改電郵"><br/>
+                <input type="text" id="email1" name="email1" placeholder="修改電郵"><br/>
                 <br/>
-            <br>
-            <input input class="buyBtn" type="submit" value="送出">
-            </form>
-            <form action="function.php?op=reset1" method="post">
-            <input input class="buyBtn" type="submit" value="重設">
-            </form> 
             <?php
             echo '留言時間 : '.$row['time'];
             echo '</p></div>';
-
-         } // end of while loop
-     } // end of if($result->num_rows)
-
+            ?>
+                <br>
+            <input input class="buyBtn" type="submit" value="送出">
+            <input input class="buyBtn" type="reset" value="重設">
+            </form>
+            <?php
+             
+            include_once('footer.php'); 
+        }
     }
+}
+
+if($op=='edit-cmt')
+{
+    editcmt();
+}
+function editcmt(){
+    global $dbConnection; 
+    $newname = empty($_POST['name1']);
+    $newcomment = empty($_POST['comment1']);
+    $newphone = empty($_POST['phone1']);
+    $newemail = empty($_POST['email1']);
+
+  if ($newname != 1) {
+    $sql = "UPDATE  `comment` SET `name` = '{$_POST['name1']}' WHERE `password`= '2222' ";
+
+  }
+
+//   $id = $_POST['id'];
+//   $username = $_POST['username'];
+//   $sql = sprintf(
+//     'update users set username = "%s" where id = %d',
+//     $username,
+//     $id
+//   );
+//   echo $sql . '<br>';
+//   $result = $dbConnection->query($sql);
+//   if (!$result) {
+//     die($dbConnection->error);
+//   }
+
+  // 如果編輯成功
+//   header('Location: index.php');
+}
 ?>

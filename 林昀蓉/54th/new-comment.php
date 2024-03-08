@@ -23,11 +23,9 @@ include_once 'new-cmt-header.php';
     
     <br>
     <input input class="buyBtn" type="submit" value="送出">
+    <input input class="buyBtn" type="reset" value="重設">
     </form> 
-
-    <form action="function.php?op=reset" method="post">
-    <input input class="buyBtn" type="submit" value="重設">
-    </form> 
+ 
 
 <?php
 include_once 'footer.php';
