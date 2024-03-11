@@ -21,6 +21,18 @@ include_once 'header.php';
         echo '訪客電話 : '.$comment['phone'].'<br/>';
         echo '訪客電郵 : '.$comment['email'].'<br/>';
         echo '留言時間 : '.$comment['time'].'<br/>';
+        ?>
+        <form action="function.php?op=edit" method="post">
+        <input
+			type="text"
+			placeholder="輸入留言密碼"
+			name="search"
+			required><br/>
+            <button type="submit" name="edit">編輯</button>
+            <button type="reset" name="delete">重設</button><br/><br/>
+        </form>
+        <?php
+        
         echo '</p></div>';
     
     }

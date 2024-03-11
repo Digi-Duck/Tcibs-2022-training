@@ -148,36 +148,19 @@ function search(){
     }
 }
 
-if($op=='edit-cmt')
+if($op=='edit')
 {
     editcmt();
 }
 function editcmt(){
     global $dbConnection; 
-    $newname = empty($_POST['name1']);
-    $newcomment = empty($_POST['comment1']);
-    $newphone = empty($_POST['phone1']);
-    $newemail = empty($_POST['email1']);
-
-  if ($newname != 1) {
-    $sql = "UPDATE  `comment` SET `name` = '{$_POST['name1']}' WHERE `password`= '2222' ";
-
-  }
-
-//   $id = $_POST['id'];
-//   $username = $_POST['username'];
-//   $sql = sprintf(
-//     'update users set username = "%s" where id = %d',
-//     $username,
-//     $id
-//   );
-//   echo $sql . '<br>';
-//   $result = $dbConnection->query($sql);
-//   if (!$result) {
-//     die($dbConnection->error);
-//   }
-
-  // 如果編輯成功
-//   header('Location: index.php');
+    $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment`");
+    $comment = mysqli_fetch_assoc($commentQ);
+    if ($_POST['edit'] == $comment['password']){
+        header('Location: http://localhost/54th/new-comment.php');
+    }
+    else{
+        header('Location: http://localhost/54th/new-comment.php');
+    }
 }
 ?>
