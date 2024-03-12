@@ -154,13 +154,21 @@ if($op=='edit')
 }
 function editcmt(){
     global $dbConnection; 
-    $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment`");
+    
+    $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` WHERE `password` = '{$_POST['search']}'");
     $comment = mysqli_fetch_assoc($commentQ);
-    if ($_POST['edit'] == $comment['password']){
-        header('Location: http://localhost/54th/new-comment.php');
+
+    $pwd = "SELECT `password` FROM `comment` WHERE `password` = '{$_POST['search']}'";
+    $result = mysqli_query($dbConnection,$pwd);
+    $row = mysqli_fetch_assoc($result);
+    // print_r($datas);
+    // echo $_POST['search'];
+    
+    if ($_POST['search'] == $row){
+        header('Location: http://localhost/54th/edit-cmt.php');
     }
     else{
-        header('Location: http://localhost/54th/new-comment.php');
+        header('Location: http://localhost/54th/comment .php');
     }
 }
 ?>
