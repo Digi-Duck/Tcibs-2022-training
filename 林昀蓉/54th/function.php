@@ -70,7 +70,6 @@ if($op=='search')
 function search(){
     global $dbConnection; 
 
-
     $searchString = mysqli_real_escape_string($dbConnection, trim(htmlentities($_POST['search'])));
 
      if ($searchString === "" || !ctype_alnum($searchString) ) {
@@ -154,21 +153,24 @@ if($op=='edit')
 }
 function editcmt(){
     global $dbConnection; 
-    
+    global $i; 
+    $a=$i;
     $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` WHERE `password` = '{$_POST['search']}'");
     $comment = mysqli_fetch_assoc($commentQ);
 
-    $pwd = "SELECT `password` FROM `comment` WHERE `password` = '{$_POST['search']}'";
+    $pwd = "SELECT `password` FROM `comment` WHERE `id`='$a'";
     $result = mysqli_query($dbConnection,$pwd);
     $row = mysqli_fetch_assoc($result);
-    // print_r($datas);
-    // echo $_POST['search'];
+    print_r($row);
+    echo $_POST['search'];
+    echo $a;
+
     
-    if ($_POST['search'] == $row){
-        header('Location: http://localhost/54th/edit-cmt.php');
-    }
-    else{
-        header('Location: http://localhost/54th/comment .php');
-    }
+    // if ($_POST['search'] == $row['password']){
+    //     header('Location: http://localhost/54th/edit-cmt.php');
+    // }
+    // else{
+    //     header('Location: http://localhost/54th/comment.php');
+    // }
 }
 ?>
