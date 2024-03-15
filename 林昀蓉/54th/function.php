@@ -173,4 +173,22 @@ function editcmt(){
     //     header('Location: http://localhost/54th/comment.php');
     // }
 }
+if($op=='creatOrder'){
+    creatOrder();
+}
+function creatOrder(){
+    global $dbConnection;
+    $sql = "INSERT INTO `54th`.`food` (
+        `food`, 
+        ``,
+         `quantity`, 
+         `order_time`, 
+         `gem_id`
+         ) VALUES (
+         '{$_POST['name']}', 
+         '{$_POST['email']}',
+         {$_POST['quantity']}, 
+         '".date('Y-m-d H:i:s')."',
+         {$_POST['gem_id']})";
+}
 ?>
