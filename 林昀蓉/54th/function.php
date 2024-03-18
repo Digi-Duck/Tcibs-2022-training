@@ -173,22 +173,40 @@ function editcmt(){
     //     header('Location: http://localhost/54th/comment.php');
     // }
 }
-if($op=='creatOrder'){
-    creatOrder();
+if($op=='shoppingCar')
+{
+    shoppingCar();
 }
-function creatOrder(){
+function shoppingCar(){
     global $dbConnection;
-    $sql = "INSERT INTO `54th`.`food` (
+    $shoppingCarQ = mysqli_query($dbConnection, "SELECT `price`,`food` FROM `food` WHERE `id` = '{$_POST['food_id']}'");
+    $shoppingCar = mysqli_fetch_assoc($shoppingCarQ);
+    $price = (int)$shoppingCar['price'];
+    $quantity = (int)$_POST['quantity'];
+    
+
+    $sql = "INSERT INTO `54th`.`shoppingCar` (
         `food`, 
-        ``,
-         `quantity`, 
-         `order_time`, 
-         `gem_id`
+        `quantity`,
+        `name`,
+         `email`,
+         `money`, 
+         `time` 
          ) VALUES (
-         '{$_POST['name']}', 
+         '{$shoppingCar['food']}', 
+         '{$_POST['quantity']}',
+         '{$_POST['name']}',
          '{$_POST['email']}',
-         {$_POST['quantity']}, 
-         '".date('Y-m-d H:i:s')."',
-         {$_POST['gem_id']})";
+          $quantity*$price,
+          '".date('Y-m-d H:i:s')."'
+         )";
+
+         if(mysqli_query($dbConnection, $sql))
+         {
+             header('Location: http://localhost/54th/ordercomplete.php');
+         }
+         else{
+     
+         }   
 }
 ?>

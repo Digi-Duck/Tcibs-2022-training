@@ -1,13 +1,14 @@
 <?php
 include_once 'dbconnect.php';
 include_once 'header.php';
-$foodQ = mysqli_query($dbConnection, "SELECT * FROM `food`");
+$foodQ = mysqli_query($dbConnection, "SELECT `food` FROM `food` WHERE `food`");
 $food = mysqli_fetch_assoc($foodQ);
+$name = $_GET['id']
 ?>
-<form action="/functions.php?op=createOrder" method="post">
+<form action="function.php?op=shoppingCar" method="post">
   <br><br>
   <label for="food_name">預定產品名稱 </label>
-  <input type="hidden" id="food_id" name="food_id" value="<?php echo $food['id'];?>">
+  <input type="hidden" id="food_id" name="food_id" value="<?php echo $_GET['id'];?>">
   
   <h2><?php echo $food['food'];?></h2>
 
