@@ -173,40 +173,49 @@ function editcmt(){
     //     header('Location: http://localhost/54th/comment.php');
     // }
 }
-if($op=='shoppingCar')
-{
+if($op == 'shoppingCar') {
     shoppingCar();
 }
+
 function shoppingCar(){
     global $dbConnection;
-    $shoppingCarQ = mysqli_query($dbConnection, "SELECT `price`,`food` FROM `food` WHERE `id` = '{$_POST['food_id']}'");
-    $shoppingCar = mysqli_fetch_assoc($shoppingCarQ);
-    $price = (int)$shoppingCar['price'];
-    $quantity = (int)$_POST['quantity'];
-    
 
-    $sql = "INSERT INTO `54th`.`shoppingCar` (
-        `food`, 
-        `quantity`,
-        `name`,
-         `email`,
-         `money`, 
-         `time` 
-         ) VALUES (
-         '{$shoppingCar['food']}', 
-         '{$_POST['quantity']}',
-         '{$_POST['name']}',
-         '{$_POST['email']}',
-          $quantity*$price,
-          '".date('Y-m-d H:i:s')."'
-         )";
+    // 檢查是否有傳遞食物 id
+    if(isset($_POST['food_id'])) {
+        $foodid = $_POST['food_id'];
 
-         if(mysqli_query($dbConnection, $sql))
-         {
-             header('Location: http://localhost/54th/ordercomplete.php');
-         }
-         else{
-     
-         }   
+        $shoppingCarQ = mysqli_query($dbConnection, "SELECT `price`,`food` FROM `food` WHERE `img` = '$foodid'");
+        $shoppingCar = mysqli_fetch_assoc($shoppingCarQ);
+        $price = (int)$shoppingCar['price'];
+        $quantity = (int)$_POST['quantity'];
+
+        $sql = "INSERT INTO `54th`.`shoppingCar` (
+            `food`, 
+            `quantity`,
+            `name`,
+             `email`,
+             `money`, 
+             `time` 
+             ) VALUES (
+             '{$shoppingCar['food']}', 
+             '{$_POST['quantity']}',
+             '{$_POST['name']}',
+             '{$_POST['email']}',
+              $quantity*$price,
+              '".date('Y-m-d H:i:s')."'
+             )";
+
+             if(mysqli_query($dbConnection, $sql))
+             {
+                 header('Location: http://localhost/54th/ordercomplete.php');
+                 exit(); // 重定向後退出腳本
+             }
+             else{
+                // 處理資料庫查詢失敗的情況
+             }   
+    } else {
+        echo "No product ID provided!";
+        exit(); // 如果沒有提供產品 ID，則退出腳本
+    }
 }
 ?>
