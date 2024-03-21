@@ -24,12 +24,6 @@ if(isset($_GET['id'])) {
   
   <h2><?php echo $foodname;?></h2>
 
-  <label for="name">你的稱呼:</label>
-  <input type="text" id="name" name="name"><br/>
-
-  <label for="email">你的電郵:</label>
-  <input type="email" id="email" name="email" require><br/>
-
   <label for="quantity">購買數量:</label>
   <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
   

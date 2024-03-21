@@ -192,22 +192,18 @@ function shoppingCar(){
         $sql = "INSERT INTO `54th`.`shoppingCar` (
             `food`, 
             `quantity`,
-            `name`,
-             `email`,
              `money`, 
              `time` 
              ) VALUES (
              '{$shoppingCar['food']}', 
              '{$_POST['quantity']}',
-             '{$_POST['name']}',
-             '{$_POST['email']}',
               $quantity*$price,
               '".date('Y-m-d H:i:s')."'
              )";
 
              if(mysqli_query($dbConnection, $sql))
              {
-                 header('Location: http://localhost/54th/ordercomplete.php');
+                 header('Location: http://localhost/54th/shoppingcar.php');
                  exit(); // 重定向後退出腳本
              }
              else{
@@ -217,5 +213,36 @@ function shoppingCar(){
         echo "No product ID provided!";
         exit(); // 如果沒有提供產品 ID，則退出腳本
     }
+}
+if($op == 'checkout') {
+    checkout();
+}
+function checkout(){
+    global $dbConnection;
+    $carQ = mysqli_query($dbConnection, "SELECT * FROM `shoppingcar`");
+    $car = mysqli_fetch_assoc($carQ);
+    $sql = "INSERT INTO `54th`.`checkout` (
+        `name`, 
+        `email`,
+         `food`, 
+         `quantity`, 
+         `money`, 
+         `time` 
+         ) VALUES (
+         '{$_POST['name']}', 
+         '{$_POST['email']}', 
+         '{$car['food']}', 
+         '{$car['quantity']}',
+         '{$car['money']}', 
+          '".date('Y-m-d H:i:s')."'
+         )";
+         if(mysqli_query($dbConnection, $sql))
+         {
+             header('Location: http://localhost/54th/ordercomplete.php');
+             exit(); // 重定向後退出腳本
+         }
+         else{
+            
+         }  
 }
 ?>
