@@ -149,23 +149,26 @@ function search(){
 
 if($op=='edit')
 {
-    editcmt();
+    $i = $_POST['search']; // 從表單中獲取 $i 的值
+    editcmt($i); // 將 $i 變量作為參數傳遞給 editcmt() 函數
 }
-function editcmt(){
+function editcmt($i){
     global $dbConnection; 
-    global $i; 
-    $a=$i;
+
     $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` WHERE `password` = '{$_POST['search']}'");
     $comment = mysqli_fetch_assoc($commentQ);
 
-    $pwd = "SELECT `password` FROM `comment` WHERE `id`='$a'";
-    $result = mysqli_query($dbConnection,$pwd);
-    $row = mysqli_fetch_assoc($result);
-    print_r($row);
-    echo $_POST['search'];
-    echo $a;
+    $pwdQ = "SELECT `password` FROM `comment` WHERE `id`='$i'";
+    $pwd = mysqli_query($dbConnection,$pwdQ);
+    $row = mysqli_fetch_assoc($pwd);
+    if ($row) {
+        // $row 變量不為空值，請確保它包含您預期的數據
+        print_r($row);
+    } else {
+        // $row 變量為空值，請檢查您的查詢和數據庫中的數據
+        echo "No data found for id: $i";
+    }
 
-    
     // if ($_POST['search'] == $row['password']){
     //     header('Location: http://localhost/54th/edit-cmt.php');
     // }
@@ -220,29 +223,30 @@ if($op == 'checkout') {
 function checkout(){
     global $dbConnection;
     $carQ = mysqli_query($dbConnection, "SELECT * FROM `shoppingcar`");
-    $car = mysqli_fetch_assoc($carQ);
-    $sql = "INSERT INTO `54th`.`checkout` (
-        `name`, 
-        `email`,
-         `food`, 
-         `quantity`, 
-         `money`, 
-         `time` 
-         ) VALUES (
-         '{$_POST['name']}', 
-         '{$_POST['email']}', 
-         '{$car['food']}', 
-         '{$car['quantity']}',
-         '{$car['money']}', 
-          '".date('Y-m-d H:i:s')."'
-         )";
-         if(mysqli_query($dbConnection, $sql))
-         {
-             header('Location: http://localhost/54th/ordercomplete.php');
-             exit(); // 重定向後退出腳本
-         }
-         else{
-            
-         }  
+    while ($car = mysqli_fetch_assoc($carQ)){
+        print_r($car);
+        $sql = "INSERT INTO `54th`.`checkout` (
+            `name`, 
+            `email`,
+             `food`, 
+             `quantity`, 
+             `money`, 
+             `time` 
+             ) VALUES (
+             '{$_POST['name']}', 
+             '{$_POST['email']}', 
+             '{$car['food']}', 
+             '{$car['quantity']}',
+             '{$car['money']}', 
+              '".date('Y-m-d H:i:s')."'
+             )";
+             if(mysqli_query($dbConnection, $sql)) {
+                // 插入成功
+            } else {
+                // 插入失敗
+            }
+    }
+    header('Location: http://localhost/54th/ordercomplete.php');
+    exit(); // 重定向後退出腳本
 }
 ?>

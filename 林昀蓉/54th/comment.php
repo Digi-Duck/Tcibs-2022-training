@@ -10,13 +10,11 @@ include_once 'header.php';
     </h1>
 
 <?php
-    $i="a1";
     $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment`");
+    $i = 1;
     while ($comment = mysqli_fetch_assoc($commentQ)) {
-        global $i; 
-        $i;
-
-        echo '<div class="comment"><p>';
+        
+        echo '<div class="comment" id="' . $i . '"><p>'; // 在此設置 id 為 $i
         echo '訪客名稱 : '.$comment['name'].'<br/>';
         echo '訪客回饋 : '.$comment['comment'].'<br/>';
         echo '訪客電話 : '.$comment['phone'].'<br/>';
@@ -25,18 +23,17 @@ include_once 'header.php';
         ?>
         <form action="function.php?op=edit" method="post">
         <input
-			type="text"
-			placeholder="輸入留言密碼"
-			name="search";
-            id= ;
-			required><br/>
-            <button type="submit" name="edit">編輯</button>
-            <button type="reset" name="delete">重設</button><br/><br/>
+            type="text"
+            placeholder="輸入留言密碼"
+            name="search"
+            id="<?php echo $i; ?>"
+            required><br/>
+        <button type="submit" name="edit">編輯</button>
+        <button type="reset" name="delete">重設</button><br/><br/>
         </form>
         <?php
-        echo $i;
         echo '</p></div>';
-        $i++;
+        $i++; // 增加 $i 的值
     }
 include_once 'footer.php';
 ?>

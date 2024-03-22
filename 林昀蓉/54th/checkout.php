@@ -28,4 +28,4 @@ $tottle = $money['SUM(`money`)'];
 
 <?php
 include_once 'footer.php';
-?>
+?> 
