@@ -63,94 +63,9 @@ function newcomment(){
 }
 
 
-if($op=='search')
-{
-    search();
-}
-function search(){
-    global $dbConnection; 
-
-    $searchString = mysqli_real_escape_string($dbConnection, trim(htmlentities($_POST['search'])));
-
-     if ($searchString === "" || !ctype_alnum($searchString) ) {
-         echo "Invalid search string";
-         exit();
-     }
-
-    //  $searchString = "%$searchString%";
-
-     $sql = "SELECT * FROM comment WHERE password LIKE ?";
-
-     $prepared_stmt = $dbConnection->prepare($sql);
-     $prepared_stmt->bind_param('s', $searchString);
-     $prepared_stmt->execute();
-
-     
-     $result = $prepared_stmt->get_result();
-
-     if ($result->num_rows === 0) {
-         
-         echo "No match found";
-         
-         exit();
-
-     } else {
-         
-         while ($row = mysqli_fetch_assoc($result)) {
-            include_once('dbconnect.php');  
-            include_once('header.php'); 
-            include_once('new-cmt-header.php'); 
-            include_once('edit-part.php');
-            // header('Location: http://localhost/54th/edit-cmt2.php');
-            echo '<h1>您的留言：</h1>';
-            echo '<div class="edit-cmt">';
-            echo '您的名稱 : '.$row['name'];
-
-            // $cmtid = " SELECT `id` FROM `comment` WHERE `name` = '{$row['name']}' ";
-            // $prepared_stmt->bind_param('s', $cmtid);
-            // $prepared_stmt->execute();
-
-            ?>
-            <form action="function.php?op=edit-cmt" method="post">
-            <?php
-                $search = $_POST['search'];
-            ?>
-                <input type="text" id="name1" name="name1" placeholder="修改名稱"><br/>
-                <br/>
-            <?php
-            echo '您的留言 : '.$row['comment'].'<br/>';
-            ?>
-                <input type="text" id="comment1" name="comment1" placeholder="修改留言"><br/>
-                <br/>
-            <?php
-            echo '您的電話 : '.$row['phone'].'<br/>';
-            ?>
-                <input type="text" id="phone1" name="phone1" placeholder="修改電話"><br/>
-                <br/>
-            <?php
-            echo '您的電郵 : '.$row['email'].'<br/>';
-            ?>
-                <input type="text" id="email1" name="email1" placeholder="修改電郵"><br/>
-                <br/>
-            <?php
-            echo '留言時間 : '.$row['time'];
-            echo '</p></div>';
-            ?>
-                <br>
-            <input input class="buyBtn" type="submit" value="送出">
-            <input input class="buyBtn" type="reset" value="重設">
-            </form>
-            <?php
-             
-            include_once('footer.php'); 
-        }
-    }
-}
-
-if($op=='edit')
-{
-    $i = $_POST['search']; // 從表單中獲取 $i 的值
-    editcmt($i); // 將 $i 變量作為參數傳遞給 editcmt() 函數
+if ($op == 'edit') {
+    $i = $_POST['comment_id']; // 从表单中获取 $i 的值
+    editcmt($i); // 将 $i 变量作为参数传递给 editcmt() 函数
 }
 function editcmt($i){
     global $dbConnection; 
@@ -160,22 +75,16 @@ function editcmt($i){
 
     $pwdQ = "SELECT `password` FROM `comment` WHERE `id`='$i'";
     $pwd = mysqli_query($dbConnection,$pwdQ);
-    $row = mysqli_fetch_assoc($pwd);
-    if ($row) {
-        // $row 變量不為空值，請確保它包含您預期的數據
-        print_r($row);
-    } else {
-        // $row 變量為空值，請檢查您的查詢和數據庫中的數據
-        echo "No data found for id: $i";
-    }
+    $row = mysqli_fetch_assoc($pwd); // 將 $row 變量更正為 $pwd
 
-    // if ($_POST['search'] == $row['password']){
-    //     header('Location: http://localhost/54th/edit-cmt.php');
-    // }
-    // else{
-    //     header('Location: http://localhost/54th/comment.php');
-    // }
+    if ($_POST['search'] == $row['password']){
+        header('Location: http://localhost/54th/edit-cmt.php');
+    }
+    else{
+        header('Location: http://localhost/54th/comment.php');
+    }
 }
+
 if($op == 'shoppingCar') {
     shoppingCar();
 }
@@ -220,32 +129,41 @@ function shoppingCar(){
 if($op == 'checkout') {
     checkout();
 }
-function checkout(){
+function checkout() {
     global $dbConnection;
+
+    // 選擇購物車中的商品信息
     $carQ = mysqli_query($dbConnection, "SELECT * FROM `shoppingcar`");
-    while ($car = mysqli_fetch_assoc($carQ)){
-        print_r($car);
+    while ($car = mysqli_fetch_assoc($carQ)) {
+        // 輸出購物車中的商品信息
+
+        // 插入購物車中的商品信息到 `checkout` 表
         $sql = "INSERT INTO `54th`.`checkout` (
-            `name`, 
-            `email`,
-             `food`, 
-             `quantity`, 
-             `money`, 
-             `time` 
-             ) VALUES (
-             '{$_POST['name']}', 
-             '{$_POST['email']}', 
-             '{$car['food']}', 
-             '{$car['quantity']}',
-             '{$car['money']}', 
-              '".date('Y-m-d H:i:s')."'
-             )";
-             if(mysqli_query($dbConnection, $sql)) {
-                // 插入成功
-            } else {
-                // 插入失敗
-            }
+                    `name`, 
+                    `email`,
+                    `food`, 
+                    `quantity`, 
+                    `money`, 
+                    `time` 
+                ) VALUES (
+                    ?, ?, ?, ?, ?, ?
+                )";
+        $stmt = mysqli_prepare($dbConnection, $sql);
+        mysqli_stmt_bind_param($stmt, 'sssiis', $_POST['name'], $_POST['email'], $car['food'], $car['quantity'], $car['money'], date('Y-m-d H:i:s'));
+        mysqli_stmt_execute($stmt);
+
+        // 檢查插入操作是否成功
+        if(mysqli_stmt_affected_rows($stmt) > 0) {
+            // 插入成功
+        } else {
+            // 插入失敗
+        }
+        // 釋放資源
+        mysqli_stmt_close($stmt);
     }
+    // 清空購物車
+    mysqli_query($dbConnection, "DELETE FROM `shoppingcar`");
+    // 重定向到訂單完成頁面
     header('Location: http://localhost/54th/ordercomplete.php');
     exit(); // 重定向後退出腳本
 }

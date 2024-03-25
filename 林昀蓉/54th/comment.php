@@ -22,14 +22,14 @@ include_once 'header.php';
         echo '留言時間 : '.$comment['time'].'<br/>';
         ?>
         <form action="function.php?op=edit" method="post">
-        <input
+            <input type="hidden" name="comment_id" value="<?php echo $i; ?>">
+            <input
             type="text"
             placeholder="輸入留言密碼"
             name="search"
-            id="<?php echo $i; ?>"
             required><br/>
-        <button type="submit" name="edit">編輯</button>
-        <button type="reset" name="delete">重設</button><br/><br/>
+            <button type="submit" name="edit">編輯</button>
+            <button type="reset" name="delete">重設</button><br/><br/>
         </form>
         <?php
         echo '</p></div>';
