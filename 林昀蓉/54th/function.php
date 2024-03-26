@@ -8,6 +8,7 @@ if($op=='checkLogin')
 {
     checkLogin($_POST['account'],$_POST['password']);
 }
+
 function checkLogin($account, $password)
 {
     global $dbConnection;
@@ -31,11 +32,15 @@ if($op=='newcomment')
 {
     newcomment();
 }
+
 function newcomment(){
 
     global $dbConnection;
 
-    //儲存留言
+    // 在與資料庫交互之前設置時區
+    $dbConnection->query('SET time_zone = "+8:00"');
+
+    // 儲存留言
     $sql = "INSERT INTO `54th`.`comment` (
         `name`, 
         `comment`,
@@ -52,7 +57,7 @@ function newcomment(){
          '".date('Y-m-d H:i:s')."'
          )";
 
-    //寫入MySQL資料庫
+    // 寫入MySQL資料庫
     if(mysqli_query($dbConnection, $sql))
     {
         header('Location: http://localhost/54th/new-comment.php');
@@ -62,13 +67,16 @@ function newcomment(){
     }   
 }
 
-
 if ($op == 'edit') {
     $i = $_POST['comment_id']; // 从表单中获取 $i 的值
     editcmt($i); // 将 $i 变量作为参数传递给 editcmt() 函数
 }
+
 function editcmt($i){
     global $dbConnection; 
+
+    // 在與資料庫交互之前設置時區
+    $dbConnection->query('SET time_zone = "+8:00"');
 
     $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` WHERE `password` = '{$_POST['search']}'");
     $comment = mysqli_fetch_assoc($commentQ);
@@ -91,6 +99,9 @@ if($op == 'shoppingCar') {
 
 function shoppingCar(){
     global $dbConnection;
+
+    // 在與資料庫交互之前設置時區
+    $dbConnection->query('SET time_zone = "+8:00"');
 
     // 檢查是否有傳遞食物 id
     if(isset($_POST['food_id'])) {
@@ -126,11 +137,16 @@ function shoppingCar(){
         exit(); // 如果沒有提供產品 ID，則退出腳本
     }
 }
+
 if($op == 'checkout') {
     checkout();
 }
+
 function checkout() {
     global $dbConnection;
+
+    // 在與資料庫交互之前設置時區
+    $dbConnection->query('SET time_zone = "+8:00"');
 
     // 選擇購物車中的商品信息
     $carQ = mysqli_query($dbConnection, "SELECT * FROM `shoppingcar`");
