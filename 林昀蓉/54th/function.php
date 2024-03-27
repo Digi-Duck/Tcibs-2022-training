@@ -69,17 +69,14 @@ function newcomment(){
 
 if ($op == 'edit') {
     $i = $_POST['comment_id']; // 从表单中获取 $i 的值
-    editcmt($i); // 将 $i 变量作为参数传递给 editcmt() 函数
+    edit($i); // 将 $i 变量作为参数传递给 editcmt() 函数
 }
 
-function editcmt($i){
+function edit($i){
     global $dbConnection; 
 
     // 在與資料庫交互之前設置時區
     $dbConnection->query('SET time_zone = "+8:00"');
-
-    $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` WHERE `password` = '{$_POST['search']}'");
-    $comment = mysqli_fetch_assoc($commentQ);
 
     $pwdQ = "SELECT `password` FROM `comment` WHERE `id`='$i'";
     $pwd = mysqli_query($dbConnection,$pwdQ);
@@ -91,6 +88,31 @@ function editcmt($i){
     else{
         header('Location: http://localhost/54th/comment.php');
     }
+}
+if ($op == 'editcmt'){
+    $i = $_GET['comment_id']; 
+    editcmt($i);
+}
+function editcmt($i){
+    global $dbConnection;
+    $time = "編輯時間" . date('Y-m-d H:i:s');
+    // 構建 SQL 查詢語句
+    $sql = "UPDATE `comment` SET 
+        `name`='{$_POST['name']}',
+        `comment`='{$_POST['comment']}',
+        `phone`='{$_POST['phone']}',
+        `email`='{$_POST['email']}',
+        `time`='$time'
+        WHERE `id`='".$i."'";
+
+    // 執行 SQL 查詢
+    if(mysqli_query($dbConnection, $sql)) {
+        // header('Location: http://localhost/54th/finish-edit.php');
+        echo $i;
+        exit(); // 重定向後退出腳本
+    } else {
+        echo 'fail';
+    } 
 }
 
 if($op == 'shoppingCar') {

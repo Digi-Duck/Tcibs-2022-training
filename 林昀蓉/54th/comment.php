@@ -11,7 +11,8 @@ include_once 'header.php';
 <?php
 // 修改 SQL 查詢以按時間遞減排序
 $commentQ = mysqli_query($dbConnection, "SELECT * FROM `comment` ORDER BY `time` DESC");
-$i = 1;
+$numRows = mysqli_num_rows($commentQ);
+$i = $numRows; // 使用資料庫中的留言數作為起始值
 while ($comment = mysqli_fetch_assoc($commentQ)) {
 
     echo '<div class="comment" id="' . $i . '"><p>'; // 在此設置 id 為 $i
@@ -28,12 +29,12 @@ while ($comment = mysqli_fetch_assoc($commentQ)) {
         placeholder="輸入留言密碼"
         name="search"
         required><br/>
-        <button type="submit" name="edit">編輯</button>
+        <a href="edit-cmt.php?comment_id=<?php echo $i; ?>">編輯評論</a>
         <button type="reset" name="delete">重設</button><br/><br/>
     </form>
     <?php
     echo '</p></div>';
-    $i++; // 增加 $i 的值
+    $i--; // 以逆序遞減 $i 的值
 }
 include_once 'footer.php';
 ?>
